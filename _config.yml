@@ -1,11 +1,11 @@
-title: Hexo
-subtitle: ''
+title: m0r016 - blog
+subtitle: 'm0r016.blog'
 description: ''
 keywords: null
-author: John Doe
-language: en
-timezone: ''
-url: http://example.com
+author: m0r016
+language: ja
+timezone: 'Asia/Tokyo'
+url: https://blog.m0r016.net
 permalink: ':year/:month/:day/:title/'
 permalink_defaults: null
 pretty_urls:
@@ -19,7 +19,7 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: ':lang'
 skip_render: null
-new_post_name: ':title.md'
+new_post_name: ':year/:month/:day/:title.md'
 default_layout: post
 titlecase: false
 external_link:
