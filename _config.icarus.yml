@@ -245,9 +245,6 @@ widgets:
                 url: 'https://twitter.com/m0r016'
             Website:
                 icon: fas fa-home
-                url: 'https://www.m0r016.net'
-            Website:
-                icon: fas fa-home
                 url: 'https://identity.m0r016.net'
             #RSS:
                 #icon: fas fa-rss
