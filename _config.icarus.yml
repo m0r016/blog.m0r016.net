@@ -103,7 +103,7 @@ navbar:
         Archives: /archives
         #Categories: /categories
         Tags: /tags
-        About: /2021/03/06/about.md
+
     # Links to be shown on the right of the navigation bar
     links:
         Download on GitHub:
@@ -152,15 +152,15 @@ search:
     type: insight
 # Comment plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/
-comment:
-    type: utterances
+#comment:
+#    type: utterances
     # Disqus shortname
-    repo: m0r016/blog.m0r016.net
-    issue-term: pathname
-    issue_number: 100  
+#    repo: m0r016/blog.m0r016.net
+#    issue-term: pathname
+#    issue_number: 100  
 # Donate plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
-donates:
+#donates:
     # "Afdian.net" donate button configurations
     #-
         #type: afdian
@@ -182,12 +182,12 @@ donates:
         # URL to the Patreon page
         #url: ''
     # Paypal donate button configurations
-    -
-        type: paypal
+#    -
+#        type: paypal
         # Paypal business ID or email address
-        business: 'yuuki12_25@icloud.com'
+#        business: 'yuuki12_25@icloud.com'
         # Currency code
-        currency_code: JPY
+#        currency_code: JPY
     # Wechat donate button configurations
     
         #type: wechat
@@ -195,10 +195,10 @@ donates:
         #qrcode: ''
 # Share plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Share/
-share:
-    type: sharethis
+#share:
+#    type: sharethis
     # URL to the ShareThis share plugin script
-    install_url: '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-604249f1acdcd676'
+#    install_url: '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-604249f1acdcd676'
 # Sidebar configurations.
 # Please be noted that a sidebar is only visible when it has at least one widget
 sidebar:
