@@ -3,21 +3,21 @@ version: 4.0.0
 # Icarus theme variant, can be "default" or "cyberpunk"
 variant: default
 # Path or URL to the website's logo
-logo: /img/logo.svg
+logo: ../../img/m0r016pm.png
 # Page metadata configurations
 head:
     # URL or path to the website's icon
-    favicon: /img/favicon.svg
+    favicon: ../../img/m0r016pm.png
     # Web application manifests configuration
     # https://developer.mozilla.org/en-US/docs/Web/Manifest
     manifest:
         # Name of the web application (default to the site title)
-        name: 
+        name: m0r016 - blog
         # The displayed name of the web application
         # when there is not enough space to display full name
-        short_name: 
+        short_name: m0r016.blog
         # The start URL of the web application
-        start_url: 
+        start_url: https://blog.m0r016.net/
         # The default theme color for the application
         theme_color: 
         # A placeholder background color for the application page to display
@@ -59,11 +59,11 @@ head:
         # You should leave this blank for most of the time
         description: 
         # Twitter card type (twitter:card)
-        twitter_card: 
+        twitter_card: summary
         # Twitter ID (twitter:creator)
-        twitter_id: 
+        twitter_id: m0r016
         # Twitter Site (twitter:site)
-        twitter_site: 
+        twitter_site: m0r016
         # Google+ profile link (deprecated)
         google_plus: 
         # Facebook admin ID
@@ -108,7 +108,7 @@ navbar:
     links:
         Download on GitHub:
             icon: fab fa-github
-            url: 'https://github.com/ppoffice/hexo-theme-icarus'
+            url: 'https://github.com/m0r016'
 # Page footer configurations
 footer:
     # Links to be shown on the right of the footer section
@@ -160,37 +160,37 @@ comment:
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
 donates:
     # "Afdian.net" donate button configurations
-    -
-        type: afdian
+    #-
+        #type: afdian
         # URL to the "Afdian.net" personal page
-        url: ''
+        #url: ''
     # Alipay donate button configurations
-    -
-        type: alipay
+    #-
+        #type: alipay
         # Alipay qrcode image URL
-        qrcode: ''
+        #qrcode: ''
     # "Buy me a coffee" donate button configurations
-    -
-        type: buymeacoffee
+    #-
+        #type: buymeacoffee
         # URL to the "Buy me a coffee" page
-        url: ''
+        #url: ''
     # Patreon donate button configurations
-    -
-        type: patreon
+    #-
+        #type: patreon
         # URL to the Patreon page
-        url: ''
+        #url: ''
     # Paypal donate button configurations
     -
         type: paypal
         # Paypal business ID or email address
-        business: ''
+        business: 'm0r016'
         # Currency code
-        currency_code: USD
+        currency_code: JPY
     # Wechat donate button configurations
-    -
-        type: wechat
+    
+        #type: wechat
         # Wechat qrcode image URL
-        qrcode: ''
+        #qrcode: ''
 # Share plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Share/
 share:
@@ -217,36 +217,36 @@ widgets:
         position: left
         type: profile
         # Author name
-        author: Your name
+        author: m0r016
         # Author title
-        author_title: Your title
+        author_title: m0r016 - blog
         # Author's current location
-        location: Your location
+        location: Ibaraki, Japan
         # URL or path to the avatar image
-        avatar: 
+        avatar: ../../img/m0r016pm.png
         # Whether show the rounded avatar image
         avatar_rounded: false
         # Email address for the Gravatar
         gravatar: 
         # URL or path for the follow button
-        follow_link: 'https://github.com/ppoffice'
+        follow_link: 'https://github.com/m0r016'
         # Links to be shown on the bottom of the profile widget
         social_links:
             Github:
                 icon: fab fa-github
-                url: 'https://github.com/ppoffice'
-            Facebook:
-                icon: fab fa-facebook
-                url: 'https://facebook.com'
+                url: 'https://github.com/m0r016'
+            #Facebook:
+                #icon: fab fa-facebook
+                #url: 'https://facebook.com'
             Twitter:
                 icon: fab fa-twitter
-                url: 'https://twitter.com'
-            Dribbble:
-                icon: fab fa-dribbble
-                url: 'https://dribbble.com'
-            RSS:
-                icon: fas fa-rss
-                url: /
+                url: 'https://twitter.com/m0r016'
+            #Dribbble:
+                #icon: fab fa-dribbble
+                #url: 'https://dribbble.com'
+            #RSS:
+                #icon: fas fa-rss
+                #url: /
     # Table of contents widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
@@ -266,7 +266,7 @@ widgets:
         # Names and URLs of the sites
         links:
             Hexo: 'https://hexo.io'
-            Bulma: 'https://bulma.io'
+            #Bulma: 'https://bulma.io'
     # Categories widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
