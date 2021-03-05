@@ -183,7 +183,7 @@ donates:
     -
         type: paypal
         # Paypal business ID or email address
-        business: 'm0r016'
+        business: 'yuuki12_25@icloud.com'
         # Currency code
         currency_code: JPY
     # Wechat donate button configurations
