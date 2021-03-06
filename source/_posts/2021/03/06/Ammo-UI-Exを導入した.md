@@ -1,7 +1,8 @@
 ---
 title: Ammo UI Exを導入した
 date: 2021-03-06 06:43:33
-tags: fallout4
+categories: [Game, PC]
+tags: Fallout4
 ---
 
 ### 実行したこと
