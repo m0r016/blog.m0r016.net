@@ -101,8 +101,9 @@ navbar:
     menu:
         Home: /
         Archives: /archives
-        #Categories: /categories
+        Categories: /categories
         Tags: /tags
+        About: /about
 
     # Links to be shown on the right of the navigation bar
     links:
@@ -272,8 +273,8 @@ widgets:
     # Categories widget configurations
     #-
         # Where should the widget be placed, left sidebar or right sidebar
-        #position: left
-        #type: categories
+        position: left
+        type: categories
     # Recent posts widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar

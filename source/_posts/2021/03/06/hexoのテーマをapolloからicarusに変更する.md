@@ -4,17 +4,17 @@ date: 2021-03-05 19:34:40
 tags: hexo
 ---
 
-## 実行したこと
+### 実行したこと
 hexoのテーマをapolloからicarusに変更する
 
-## 目次
+### 目次
 <!-- toc -->
 
-## 概要
+### 概要
 [apollo](https://github.com/AthenaYin/hexo-theme-apollo.git)を採用していたが、ネットサーフィンをしていたところ、[icarus](https://github.com/ppoffice/hexo-theme-icarus)というものを発見、これに変更する
 <!-- more -->
 
-## 1.前提パッケージを準備する
+### 1.前提パッケージを準備する
 icarusには前提パッケージが必要らしい。知らずにgithubに上げてしまい、netlify側でエラーを吐かれた。
 
 ```
@@ -22,32 +22,32 @@ npm install --save bulma-stylus@0.8.0 hexo-renderer-inferno@^0.1.3 hexo-componen
 npm audit fix
 ```
 
-## 2.icarusを追加する
+### 2.icarusを追加する
 `git clone`でもいいのだが管理がめんどくさいので
 ```
 npm install hexo-theme-icarus
 ```
 
-## 3._config.ymlを変更する
+### 3._config.ymlを変更する
 hexoに読み込ませるためthemeを変更する
 ```
 hexo config theme icarus
 ```
 `./_config.yml`内のテーマを書き換えてもいいが、私の場合`_config.icarus.yml`が生成されなかったのでお勧めしない（一度ローカルで`hexo g`する必要があったのだろう）
 
-## 4.Githubにアップロードする
+### 4.Githubにアップロードする
 ```
 git add .
 git commit -m "change themes/icarus"
 git push origin master
 ```
 
-## 5.動作確認
+### 5.動作確認
 netlifyでdeployできているか確認できたので設定に進む
 
-## 6._config.icarus.ymlを変更
+### 6._config.icarus.ymlを変更
 icarusの設定がしたいため`./_config.icarus.yml`を変更
 
 
-## 7.動作確認して終了
+### 7.動作確認して終了
 割とたくさんの設定項目があり、細かく指定できるのだなと感じた。
