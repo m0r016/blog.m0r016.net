@@ -1,7 +1,7 @@
 ---
 title: 出力されたロードセルの値をCSVに落とし込んでみる
 date: 2021-03-06 19:42:14
-categories: [RaspberryPi, Python, loadcell, hx711, csv]
+categories: [RaspberryPi, loadcell, hx711, Python, csv]
 tags: 
 - Python
 - loadcell
@@ -134,7 +134,7 @@ import datetime
         val = [0,0] #配列を用意する
         val[0] = datetime.datetime.now() #現在時間の取得(Raspberry Pi側で設定されている時間に依存する)
         val[1] = hx.get_weight(5) #ロードセルからの値を拾う
-        print('now weight ' + str(val[0]) + ',' + ' now time ' + str(val[1])) #時間,値となるようにターミナルに出力する
+        print('now time ' + str(val[0]) + ',' + ' now wight ' + str(val[1])) #時間,値となるようにターミナルに出力する
 ```
 配列の準備は完了した。
 
@@ -218,7 +218,7 @@ while True:
         val = [0,0]
         val[0] = datetime.datetime.now()
         val[1] = hx.get_weight(5)
-        print('now weight ' + str(val[0]) + ',' + ' now time ' + str(val[1]))
+        print('now time ' + str(val[0]) + ',' + ' now weight ' + str(val[1]))
 
         with open('./weight.csv', 'a') as f:
             writer = csv.writer(f)
@@ -239,13 +239,11 @@ while True:
 ```
 
 ### 4.動作確認
-`python example.py`、ターミナルからは`now weight 2021-03-06 19:59:06.036324, now time -52`と出力され、csvには`2021-03-06 19:59:26.693445,562`と保存されるようになった。これでGoogle Sheetsに落とし込んでグラフ化したり、JavaScriptでグラフを作り、Web上で公開することができるようになった。
+`python example.py`、ターミナルからは`now time 2021-03-06 19:59:06.036324, now weight -52`と出力され、csvには`2021-03-06 19:59:26.693445,562`と保存されるようになった。これでGoogle Sheetsに落とし込んでグラフ化したり、JavaScriptでグラフを作り、Web上で公開することができるようになった。
 
 ### 5.最後に
 
 Pythonは扱いやすい言語と言われているが本当にそう感じた。JavaScriptを用いてグラフ出力をやってみたいと思っている。
-
-接続ができたら動作確認をする。(SSH,Python実行環境は既に構築できているものとする)
 
 ### 参考
 
