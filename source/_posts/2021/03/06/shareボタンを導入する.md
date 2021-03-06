@@ -86,5 +86,8 @@ class AddToAny extends Component {
 {% asset_img 00111.png browser %}
 きちんと反映されている。
 
-### P.S
+### P.S.
 下の著作権表記が少し邪魔に感じるのでどこかにまとめておきたいところ
+
+### 参考
+[Icarus User Guide - Share Buttons](https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Share/)
