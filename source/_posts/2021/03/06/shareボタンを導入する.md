@@ -21,7 +21,7 @@ shareボタンを表示したいなと思ったので表示させる
 ```
 git submodule add https://github.com/m0r016/hexo-theme-icarus.git
 ```
-これでsubmoduleとして追加することがd圭太
+これでsubmoduleとして追加することができた。
 
 ### 2._config.icarus.ymlを編集する
 shareを探す。
