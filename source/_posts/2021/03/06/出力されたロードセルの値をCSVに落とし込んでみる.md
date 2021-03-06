@@ -1,7 +1,7 @@
 ---
 title: 出力されたロードセルの値をCSVに落とし込んでみる
 date: 2021-03-06 19:42:14
-categories: [RaspberryPi, loadcell, hx711, Python, csv]
+categories: [RaspberryPi, loadcell, Python, csv]
 tags: 
 - Python
 - loadcell
