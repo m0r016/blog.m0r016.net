@@ -6,6 +6,8 @@ tags:
 - Python
 - loadcell
 - hx711
+description: "ラズパイでロードセルの値を拾うことができたのでcsvに落とし、ログとして残せるようにする"
+thumbnail: 出力されたロードセルの値をCSVに落とし込んでみる/Photo18.png
 ---
 
 ### 目次

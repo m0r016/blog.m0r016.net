@@ -97,3 +97,4 @@ sitemap:
     tag: false
     category: false
     archives: false  
+    insight: true

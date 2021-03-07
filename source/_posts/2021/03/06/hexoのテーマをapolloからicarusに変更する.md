@@ -5,6 +5,7 @@ categories: [blog, hexo, theme]
 tags:
 - hexo-theme-apollo
 - hexo-theme-icarus
+description: "hexoのテーマをapolloからicarusに変更する"
 ---
 
 ### 実行したこと

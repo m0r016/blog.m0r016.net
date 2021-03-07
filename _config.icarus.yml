@@ -153,8 +153,14 @@ search:
     type: insight
 # Comment plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/
-#comment:
-#    type: utterances
+comment:
+    type: gitalk
+    client_id: 8eb0bbd05d2ed27f436f
+    client_secret: a8156e6957a6aeb1b36fd64a583ce47bcf85d13a
+    repo: m0r016/blog.m0r016.net
+    owner: m0r016
+    admin:
+        - m0r016
     # Disqus shortname
 #    repo: m0r016/blog.m0r016.net
 #    issue-term: pathname
@@ -354,7 +360,7 @@ plugins:
     # https://analytics.google.com
     google_analytics:
         # Google Analytics tracking ID
-        tracking_id: 
+        tracking_id: G-5W62JDQY72
     # Hotjar user feedback plugin
     # https://www.hotjar.com/
     hotjar:

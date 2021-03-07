@@ -4,6 +4,7 @@ date: 2021-03-06 23:17:11
 categories: [blog, hexo, share-botton]
 tags:
 - share-botton
+description: "hexoにshareボタンを導入する"
 ---
 
 ### 実行したこと
