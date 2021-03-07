@@ -4,7 +4,7 @@ date: 2021-03-06 06:43:33
 categories: [Game, PC]
 tags: Fallout4
 description: "Ammo UI Exを導入、弾薬の名前を英語表記にする"
-thumbnail: Ammo-UI-Exを導入した/Photo18.png
+thumbnail: "Ammo-UI-Exを導入した/Photo18.png"
 ---
 
 ### 実行したこと
