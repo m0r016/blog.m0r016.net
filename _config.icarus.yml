@@ -155,10 +155,9 @@ search:
 # Comment plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/
 comment:
-    type: utterances
-    repo: m0r016/blog.m0r016.net
-    issue-term: pathname
-    issue_number: 2
+    type: disqus
+    shortname: blog-m0r016-net
+
     # Disqus shortname
 #    repo: m0r016/blog.m0r016.net
 #    issue-term: pathname
