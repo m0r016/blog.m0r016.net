@@ -155,13 +155,10 @@ search:
 # Comment plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/
 comment:
-    type: gitalk
-    client_id: 8eb0bbd05d2ed27f436f
-    client_secret: a8156e6957a6aeb1b36fd64a583ce47bcf85d13a
-    repo: blog.m0r016.net
-    owner: m0r016
-    admin:
-        - m0r016
+    type: utterances
+    repo: m0r016/blog.m0r016.net
+    issue-term: pathname
+    issue_number: 2
     # Disqus shortname
 #    repo: m0r016/blog.m0r016.net
 #    issue-term: pathname
