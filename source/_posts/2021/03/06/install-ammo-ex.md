@@ -3,12 +3,12 @@ title: Ammo UI Exを導入した
 date: 2021-03-06 06:43:33
 categories: [Game, PC]
 tags: Fallout4
-description: "Ammo UI Exを導入、弾薬の名前を英語表記にする"
-thumbnail: "/2021/03/05/Ammo-UI-Exを導入した/Photo18.png"
+description: "Ammo UI Exを導入し弾薬の名前を英語表記にする"
+thumbnail: "/2021/03/05/install-ammo-ex/Photo18.png"
 ---
 
 ### 実行したこと
-Ammo UI Exを導入、弾薬の名前を英語表記にする
+Ammo UI Exを導入し弾薬の名前を英語表記にする
 
 ### 目次
 <!-- toc -->
@@ -26,7 +26,7 @@ Ammo UI Exを導入、弾薬の名前を英語表記にする
 {% youtube Rq9rNsBISHY %}
 
 ### Stringsファイルの変更
-modページにも書いてあるが、弾薬名称が英語以外の文字を含んでいると文字化けしてしまうらしい。そのためxTranslatorで弾薬名称を変更した。DLC以外には対応してるはず→[ダウンロード](https://file.m0r016.net/index.php/s/A2r5R6AwoPWEXLr)
+modページにも書いてあるが、弾薬名称が英語以外の文字を含んでいると文字化けしてしまうらしい。そのためxTranslatorで弾薬名称を変更した。xmlファイルを配布しておく、DLC以外には対応してるはず→[ダウンロード](https://file.m0r016.net/index.php/s/A2r5R6AwoPWEXLr)
 
 英語環境であれば保存した際に`Fallout_ja.*`と生成されてしまうので認識されるように`Fallout_en.*`と書き換える必要がある
 

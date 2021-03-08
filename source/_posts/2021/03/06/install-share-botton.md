@@ -5,7 +5,7 @@ categories: [blog, hexo, share-botton]
 tags:
 - share-botton
 description: "hexoにshareボタンを導入する"
-thumbnail: "/2021/03/06/shareボタンを導入する/00111.png"
+thumbnail: "/2021/03/06/install-share-botton/00111.png"
 ---
 
 ### 実行したこと
@@ -14,8 +14,6 @@ hexoにshareボタンを導入する
 ### 目次
 <!-- toc -->
 
-### 概要
-shareボタンを表示したいなと思ったので表示させる
 <!-- more -->
 
 ### 1.icarusをforkする
@@ -46,7 +44,7 @@ share:
 
 ### 3.share bottonを取得する
 [AddToAny](https://www.addtoany.com/)で取得できるらしい。
-"Get the Share Botton"とあるのでクリック、"Any Website"を選択。"Choose Services"で適当に選択。"Get Button Code"で必要なコードを入手することができる
+"Get the Share Botton"とあるのでクリック、"Any Website"を選択。"Choose Services"で適当に選択。"Get Button Code"で必要なコードを入手することができる。
 
 ### 4.shareボタンの設定
 AddToAnyの[レイアウトファイル](https://github.com/ppoffice/hexo-component-inferno/blob/0.2.2/src/view/share/addtoany.jsx)をリポジトリから引っ張ってくる必要があるらしい。これを`/themes/icarus/layout/search/addtoany.jsx`に書き込み、AddToAnyで入手したコードを貼り付ける。
