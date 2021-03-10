@@ -309,9 +309,9 @@ widgets:
         position: left
         type: adsense
         # AdSense client ID
-        client_id: ''
+        client_id: 'ca-pub-3866738942732668'
         # AdSense AD unit ID
-        slot_id: ''
+        slot_id: '8094404791'
 # Plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/
 plugins:
