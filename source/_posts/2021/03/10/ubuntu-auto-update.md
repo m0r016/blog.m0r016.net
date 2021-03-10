@@ -1,5 +1,5 @@
 ---
-title: ubuntu-auto-update
+title: Ubuntuを自動アップデートする
 date: 2021-03-10 00:40:47
 categories: [ubuntu]
 tags:

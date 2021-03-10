@@ -5,7 +5,8 @@ categories: [blog, hexo, share-botton]
 tags:
 - share-botton
 description: "hexoにshareボタンを導入する"
-thumbnail: "/2021/03/06/install-share-botton/00111.png"
+#thumbnail: "/2021/03/06/install-share-botton/addtoany-logo.png"
+#cover: "/2021/03/06/install-share-botton/addtoany-title.png"
 ---
 
 ### 実行したこと

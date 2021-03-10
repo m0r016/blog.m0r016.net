@@ -6,6 +6,8 @@ tags:
 - hexo-theme-apollo
 - hexo-theme-icarus
 description: "hexoのテーマをapolloからicarusに変更する"
+thumbnail: "/2021/03/05/change-theme/icarus.png"
+cover: "/2021/03/05/change-theme/icarus-title.png"
 ---
 
 ### はじめに
@@ -81,10 +83,10 @@ AboutやReadMeは初めから生成されておらず、ブラウザからアク
       url: 'your-sns-url'
 ```
 `your-sns-icon`は[ここのサイト](https://fontawesome.com/icons?d=gallery&p=2)にアクセスし
-{% asset_img fontawesome.png fo4}
+{% asset_img fontawesome.png fontawesome %} 
 検索窓からsnsの名前を入力、使いたいアイコンをクリックし
-{% asset_img fontawesome1.png fo4}
-<i class="fab fa-mastodon"></i>のfab~の部分をyour-sns-iconに入力するとアイコンが反映される。
+{% asset_img fontawesome1.png fontawesome %}
+のfab~の部分をyour-sns-iconに入力するとアイコンが反映される。
 
 ```
 widgets:

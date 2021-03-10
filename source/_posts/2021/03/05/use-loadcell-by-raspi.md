@@ -5,6 +5,8 @@ categories: [RaspberryPi, loadcell, hx711]
 tags: 
 - loadcell
 - hx711
+thumbnail: "/2021/03/05/use-loadcell-by-raspi/raspi.jpg"
+cover: "/2021/03/05/use-loadcell-by-raspi/raspi-title.png"
 ---
 
 ### 目次
