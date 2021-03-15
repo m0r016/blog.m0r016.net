@@ -45,7 +45,7 @@
     <link href="https://blog.m0r016.net/2021/03/15/migration-github-pages/"/>
     <id>https://blog.m0r016.net/2021/03/15/migration-github-pages/</id>
     <published>2021-03-15T05:40:34.000Z</published>
-    <updated>2021-03-15T07:55:49.650Z</updated>
+    <updated>2021-03-15T07:58:51.297Z</updated>
     
     
     <summary type="html">netlifyからgithub pagesに乗り換える</summary>
@@ -206,11 +206,11 @@
     <category term="csv" scheme="https://blog.m0r016.net/categories/RaspberryPi/loadcell/Python/csv/"/>
     
     
-    <category term="Python" scheme="https://blog.m0r016.net/tags/Python/"/>
-    
     <category term="loadcell" scheme="https://blog.m0r016.net/tags/loadcell/"/>
     
     <category term="hx711" scheme="https://blog.m0r016.net/tags/hx711/"/>
+    
+    <category term="Python" scheme="https://blog.m0r016.net/tags/Python/"/>
     
   </entry>
   
