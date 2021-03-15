@@ -82,7 +82,9 @@ PROBABLE CALL STACK:
 …
 ```
 とあるが、4行目の`Unhandled exception "EXCEPTION_ACCESS_VIOLATION" at 0x7FF710CC74CD Fallout4.exe+1CD74CD`や41行目の`PROBABLE CALL STACK:`以下が原因となっているらしい。
-この場合、1CD74CDが真っ先に引っかかるのでロードオーダーを見てみる。すると以外にも装備modが出てきた。
+この場合、1CD74CDが真っ先に引っかかるのでロードオーダーを見てみる。
+1Cがロードオーダーの番号だ。
+すると以外にも装備modが出てきた。
 抜いてみると、確かにCTDが減っていて、突然ゲームが落ちてしまうなどというストレスが減った。
 
 ## おわりに
