@@ -5,8 +5,7 @@ categories: [blog, hexo, github-pages]
 tags:
 - github-pages
 description: "netlifyからgithub pagesに乗り換える"
-thumbnail: "/2021/03/05/change-theme/icarus.png"
-cover: "/2021/03/05/change-theme/icarus-title.png"
+
 ---
 
 ### はじめに
