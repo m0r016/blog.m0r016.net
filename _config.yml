@@ -60,8 +60,6 @@ include: null
 exclude: null
 ignore: null
 theme: icarus
-deploy:
-  type: ''
 plugins:
   - hexo-generator-robotstxt
   - hexo-generator-feed
@@ -93,3 +91,7 @@ sitemap:
     category: false
     archives: false  
     insight: true
+deploy:
+  type: git
+  repo: https://github.com/m0r016/blog.m0r016.net.git
+  branch: public
