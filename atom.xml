@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>m&#39;Tech</title>
+  <icon>https://blog.m0r016.net/icon.png</icon>
+  <subtitle>m&#39;Tech</subtitle>
+  <link href="https://blog.m0r016.net/atom.xml" rel="self"/>
+  
+  <link href="https://blog.m0r016.net/"/>
+  <updated>2021-03-15T06:24:22.062Z</updated>
+  <id>https://blog.m0r016.net/</id>
+  
+  <author>
+    <name>m0r016</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>母の裁縫日記 - 001</title>
+    <link href="https://blog.m0r016.net/2021/03/15/mother-sewing-dairy001/"/>
+    <id>https://blog.m0r016.net/2021/03/15/mother-sewing-dairy001/</id>
+    <published>2021-03-15T05:58:30.000Z</published>
+    <updated>2021-03-15T06:24:22.062Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;img src=&quot;/2021/03/15/mother-sewing-dairy001/IMG_20210315_140237_5M-2.jpg&quot; class&gt;
+&lt;h3&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    
+    <category term="母の裁縫日記" scheme="https://blog.m0r016.net/tags/%E6%AF%8D%E3%81%AE%E8%A3%81%E7%B8%AB%E6%97%A5%E8%A8%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>netlifyからgithub pagesに乗り換える</title>
+    <link href="https://blog.m0r016.net/2021/03/15/migration-github-pages/"/>
+    <id>https://blog.m0r016.net/2021/03/15/migration-github-pages/</id>
+    <published>2021-03-15T05:40:34.000Z</published>
+    <updated>2021-03-15T06:51:18.524Z</updated>
+    
+    
+    <summary type="html">netlifyからgithub pagesに乗り換える</summary>
+    
+    
+    
+    <category term="blog" scheme="https://blog.m0r016.net/categories/blog/"/>
+    
+    <category term="hexo" scheme="https://blog.m0r016.net/categories/blog/hexo/"/>
+    
+    <category term="github-pages" scheme="https://blog.m0r016.net/categories/blog/hexo/github-pages/"/>
+    
+    
+    <category term="github-pages" scheme="https://blog.m0r016.net/tags/github-pages/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Fallout4のCTDの原因を突き止める</title>
+    <link href="https://blog.m0r016.net/2021/03/12/ctd-fix/"/>
+    <id>https://blog.m0r016.net/2021/03/12/ctd-fix/</id>
+    <published>2021-03-12T02:54:00.000Z</published>
+    <updated>2021-03-13T04:51:13.575Z</updated>
+    
+    
+    <summary type="html">Fallout4のCTDの原因を突き止める</summary>
+    
+    
+    
+    <category term="Game" scheme="https://blog.m0r016.net/categories/Game/"/>
+    
+    <category term="PC" scheme="https://blog.m0r016.net/categories/Game/PC/"/>
+    
+    
+    <category term="Fallout4" scheme="https://blog.m0r016.net/tags/Fallout4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Google Adsenseに通った話</title>
+    <link href="https://blog.m0r016.net/2021/03/10/passed-google-adsence/"/>
+    <id>https://blog.m0r016.net/2021/03/10/passed-google-adsence/</id>
+    <published>2021-03-10T11:02:20.000Z</published>
+    <updated>2021-03-12T06:05:56.291Z</updated>
+    
+    
+    <summary type="html">Google Adsenseに通った話</summary>
+    
+    
+    
+    <category term="雑記" scheme="https://blog.m0r016.net/categories/%E9%9B%91%E8%A8%98/"/>
+    
+    
+    <category term="Adsense" scheme="https://blog.m0r016.net/tags/Adsense/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>あの日から十年経って。</title>
+    <link href="https://blog.m0r016.net/2021/03/10/2021-311/"/>
+    <id>https://blog.m0r016.net/2021/03/10/2021-311/</id>
+    <published>2021-03-09T18:57:41.000Z</published>
+    <updated>2021-03-10T14:14:31.692Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Mastodonを眺めていたら3.11を扱った&lt;a href=&quot;https://note.com/nhk_syuzai/n/nffb61de9ca6a&quot;&gt;note&lt;/a&gt;が流れてきた。&lt;br&gt;読み終わって、もう十年かぁ…と思っていたが、自分の中でかなりの部分を忘れかけていることに気付いた。&lt;br&gt;これは残すべきだ、伝えていくべき事項だと思っているため、ここに書き残すとする。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="雑記" scheme="https://blog.m0r016.net/categories/%E9%9B%91%E8%A8%98/"/>
+    
+    
+    <category term="地震" scheme="https://blog.m0r016.net/tags/%E5%9C%B0%E9%9C%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Ubuntuを自動アップデートする</title>
+    <link href="https://blog.m0r016.net/2021/03/10/ubuntu-auto-update/"/>
+    <id>https://blog.m0r016.net/2021/03/10/ubuntu-auto-update/</id>
+    <published>2021-03-09T15:40:47.000Z</published>
+    <updated>2021-03-10T11:02:14.849Z</updated>
+    
+    
+    <summary type="html">ubuntuを自動アップデートする</summary>
+    
+    
+    
+    <category term="ubuntu" scheme="https://blog.m0r016.net/categories/ubuntu/"/>
+    
+    
+    <category term="ubuntu" scheme="https://blog.m0r016.net/tags/ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Fallout4のespファイルが増えてきたのでespFE化する</title>
+    <link href="https://blog.m0r016.net/2021/03/07/convert-esp-to-espfe/"/>
+    <id>https://blog.m0r016.net/2021/03/07/convert-esp-to-espfe/</id>
+    <published>2021-03-07T06:57:30.000Z</published>
+    <updated>2021-03-08T23:16:48.802Z</updated>
+    
+    
+    <summary type="html">Modを入れていくうちにespファイルが多くなってしまったのでespFE化をする。</summary>
+    
+    
+    
+    <category term="Game" scheme="https://blog.m0r016.net/categories/Game/"/>
+    
+    <category term="PC" scheme="https://blog.m0r016.net/categories/Game/PC/"/>
+    
+    
+    <category term="Fallout4" scheme="https://blog.m0r016.net/tags/Fallout4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>shareボタンを導入する</title>
+    <link href="https://blog.m0r016.net/2021/03/06/install-share-botton/"/>
+    <id>https://blog.m0r016.net/2021/03/06/install-share-botton/</id>
+    <published>2021-03-06T14:17:11.000Z</published>
+    <updated>2021-03-10T14:14:04.681Z</updated>
+    
+    
+    <summary type="html">hexoにshareボタンを導入する</summary>
+    
+    
+    
+    <category term="blog" scheme="https://blog.m0r016.net/categories/blog/"/>
+    
+    <category term="hexo" scheme="https://blog.m0r016.net/categories/blog/hexo/"/>
+    
+    <category term="share-botton" scheme="https://blog.m0r016.net/categories/blog/hexo/share-botton/"/>
+    
+    
+    <category term="share-botton" scheme="https://blog.m0r016.net/tags/share-botton/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>出力されたロードセルの値をCSVに落とし込んでみる</title>
+    <link href="https://blog.m0r016.net/2021/03/06/loadcell-to-csv/"/>
+    <id>https://blog.m0r016.net/2021/03/06/loadcell-to-csv/</id>
+    <published>2021-03-06T10:42:14.000Z</published>
+    <updated>2021-03-08T22:49:35.732Z</updated>
+    
+    
+    <summary type="html">ラズパイでロードセルの値を拾うことができたのでcsvに落とし、ログとして残せるようにする</summary>
+    
+    
+    
+    <category term="RaspberryPi" scheme="https://blog.m0r016.net/categories/RaspberryPi/"/>
+    
+    <category term="loadcell" scheme="https://blog.m0r016.net/categories/RaspberryPi/loadcell/"/>
+    
+    <category term="Python" scheme="https://blog.m0r016.net/categories/RaspberryPi/loadcell/Python/"/>
+    
+    <category term="csv" scheme="https://blog.m0r016.net/categories/RaspberryPi/loadcell/Python/csv/"/>
+    
+    
+    <category term="Python" scheme="https://blog.m0r016.net/tags/Python/"/>
+    
+    <category term="loadcell" scheme="https://blog.m0r016.net/tags/loadcell/"/>
+    
+    <category term="hx711" scheme="https://blog.m0r016.net/tags/hx711/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Ammo UI Exを導入した</title>
+    <link href="https://blog.m0r016.net/2021/03/06/install-ammo-ex/"/>
+    <id>https://blog.m0r016.net/2021/03/06/install-ammo-ex/</id>
+    <published>2021-03-05T21:43:33.000Z</published>
+    <updated>2021-03-10T14:29:13.890Z</updated>
+    
+    
+    <summary type="html">Ammo UI Exを導入し弾薬の名前を英語表記にする</summary>
+    
+    
+    
+    <category term="Game" scheme="https://blog.m0r016.net/categories/Game/"/>
+    
+    <category term="PC" scheme="https://blog.m0r016.net/categories/Game/PC/"/>
+    
+    
+    <category term="Fallout4" scheme="https://blog.m0r016.net/tags/Fallout4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexoのテーマをapolloからicarusに変更する</title>
+    <link href="https://blog.m0r016.net/2021/03/05/change-theme/"/>
+    <id>https://blog.m0r016.net/2021/03/05/change-theme/</id>
+    <published>2021-03-05T10:34:40.000Z</published>
+    <updated>2021-03-10T14:17:05.116Z</updated>
+    
+    
+    <summary type="html">hexoのテーマをapolloからicarusに変更する</summary>
+    
+    
+    
+    <category term="blog" scheme="https://blog.m0r016.net/categories/blog/"/>
+    
+    <category term="hexo" scheme="https://blog.m0r016.net/categories/blog/hexo/"/>
+    
+    <category term="theme" scheme="https://blog.m0r016.net/categories/blog/hexo/theme/"/>
+    
+    
+    <category term="hexo-theme-apollo" scheme="https://blog.m0r016.net/tags/hexo-theme-apollo/"/>
+    
+    <category term="hexo-theme-icarus" scheme="https://blog.m0r016.net/tags/hexo-theme-icarus/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ラズパイを用いて重量を図ってみる。</title>
+    <link href="https://blog.m0r016.net/2021/03/05/use-loadcell-by-raspi/"/>
+    <id>https://blog.m0r016.net/2021/03/05/use-loadcell-by-raspi/</id>
+    <published>2021-03-05T06:04:38.000Z</published>
+    <updated>2021-03-10T14:09:14.841Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;目次&quot;&gt;&lt;a href=&quot;#目次&quot; class=&quot;headerlink&quot; title=&quot;目次&quot;&gt;&lt;/a&gt;目次&lt;/h3&gt;&lt;!-- toc --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB&quot;&gt;はじめに&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%E7%92%B0%E5%A2%83&quot;&gt;環境&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#1ad%E3%82%B3%E3%83%B3%E3%83%90%E3%83%BC%E3%82%BF%E3%82%92%E7%B5%84%E3%81%BF%E7%AB%8B%E3%81%A6%E3%82%8B&quot;&gt;1.ADコンバータを組み立てる&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#1%E3%83%AD%E3%83%BC%E3%83%89%E3%82%BB%E3%83%ABvls-50k%E3%81%AE%E9%85%8D%E7%B7%9A%E7%A2%BA%E8%AA%8D&quot;&gt;1.ロードセル(VLS-50K)の配線確認&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3ad%E3%82%B3%E3%83%B3%E3%83%90%E3%83%BC%E3%82%BF%E3%81%A8raspberry-pi%E3%82%92%E6%8E%A5%E7%B6%9A%E3%81%99%E3%82%8B&quot;&gt;3.ADコンバータとRaspberry Piを接続する&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#4%E5%8B%95%E4%BD%9C%E7%A2%BA%E8%AA%8D&quot;&gt;4.動作確認&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%E6%9C%80%E5%BE%8C%E3%81%AB&quot;&gt;最後に&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- tocstop --&gt;
+
+&lt;h3 id=&quot;はじめに&quot;&gt;&lt;a href=&quot;#はじめに&quot; class=&quot;headerlink&quot; title=&quot;はじめに&quot;&gt;&lt;/a&gt;はじめに&lt;/h3&gt;&lt;p&gt;ロードセルという重量を図るものをRaspberry Piに接続し、それを見ることはできないか、と言われ調べてやってみたことをここに記す。&lt;br&gt;Googleで検索してみてもこの話題は出てこないため、少しでも参考になればいいなと思う。&lt;/p&gt;
+&lt;h3 id=&quot;環境&quot;&gt;&lt;a href=&quot;#環境&quot; class=&quot;headerlink&quot; title=&quot;環境&quot;&gt;&lt;/a&gt;環境&lt;/h3&gt;&lt;p&gt;・SSH接続が可能な&lt;a href=&quot;https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/&quot;&gt;Raspberry Pi 3b+&lt;/a&gt; (Python 2.7.16 Raspbian)&lt;br&gt;・ロードセル(&lt;a href=&quot;https://www.valcom.co.jp/product/lc/vls/&quot;&gt;VLS-50K&lt;/a&gt;)&lt;br&gt;・ADコンバータ(&lt;a href=&quot;https://akizukidenshi.com/catalog/g/gK-12370/&quot;&gt;hx711&lt;/a&gt;)&lt;br&gt;・&lt;a href=&quot;https://akizukidenshi.com/catalog/g/gC-08934/&quot;&gt;ジャンパ線&lt;/a&gt;&lt;br&gt;・ネット環境&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="RaspberryPi" scheme="https://blog.m0r016.net/categories/RaspberryPi/"/>
+    
+    <category term="loadcell" scheme="https://blog.m0r016.net/categories/RaspberryPi/loadcell/"/>
+    
+    <category term="hx711" scheme="https://blog.m0r016.net/categories/RaspberryPi/loadcell/hx711/"/>
+    
+    
+    <category term="loadcell" scheme="https://blog.m0r016.net/tags/loadcell/"/>
+    
+    <category term="hx711" scheme="https://blog.m0r016.net/tags/hx711/"/>
+    
+  </entry>
+  
+</feed>
