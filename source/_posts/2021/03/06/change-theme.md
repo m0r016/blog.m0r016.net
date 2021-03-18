@@ -3,8 +3,7 @@ title: hexoのテーマをapolloからicarusに変更する
 date: 2021-03-05 19:34:40
 categories: [blog, hexo, theme]
 tags:
-- hexo-theme-apollo
-- hexo-theme-icarus
+- hexo-theme-changes
 description: "hexoのテーマをapolloからicarusに変更する"
 thumbnail: "/2021/03/05/change-theme/icarus.png"
 cover: "/2021/03/05/change-theme/icarus-title.png"

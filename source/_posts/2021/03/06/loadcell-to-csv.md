@@ -3,9 +3,7 @@ title: 出力されたロードセルの値をCSVに落とし込んでみる
 date: 2021-03-06 19:42:14
 categories: [RaspberryPi, loadcell, Python, csv]
 tags: 
-- Python
-- loadcell
-- hx711
+- raspi-loadcell
 description: "ラズパイでロードセルの値を拾うことができたのでcsvに落とし、ログとして残せるようにする"
 ---
 
