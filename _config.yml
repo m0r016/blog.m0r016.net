@@ -95,3 +95,4 @@ deploy:
   type: git
   repo: https://github.com/m0r016/blog.m0r016.net.git
   branch: public
+google_maps_api_key: AIzaSyBLKH8v9F7BDoirzA7-zJNAy7HrdXGEFQc

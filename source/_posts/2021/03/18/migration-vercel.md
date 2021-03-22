@@ -18,7 +18,7 @@ github pagesですら少し重いなと感じたのでvercelに乗り換える
 [vercel](https://vercel.com/)とは、ウェブホスティングサービスであり、
 netlify同様githubに上げたリポジトリをもとに、自動的に生成。
 
-### 3.deployする
+### 1.deployする
 deproyする。
 [vercel](https://vercel.com/)にログインし、Start Deployingを指定。
 {% asset_img start-deploy.png %}
@@ -41,7 +41,7 @@ mywebsite.comに公開したいアドレスを入力
 DNSに追加してよと言われるので、言われたとおりにする
 {% asset_img setting-domain2.png %}
 
-### 4.pingを打ってみる。
+### 2.pingを打ってみる。
 github pagesからvercelで配信されているのか調べるために、pingを打ってみた。
 ```
 ping blog.m0r016.net
