@@ -1,7 +1,7 @@
 ---
 title: Fallout4のCTDの原因を突き止める
 date: 2021-03-12 11:54:00
-categories: [Game, PC]
+categories: [PC, Game, Fallout4]
 tags: Fallout4
 description: "Fallout4のCTDの原因を突き止める"
 #thumbnail: "/2021/03/06/install-ammo-ex/ammo-ui-logo.png"
@@ -13,7 +13,7 @@ Fallout4でmodを入れているとCTDが起きることがあるため、CTD対
 
 ### 目次
 <!-- toc -->
-
+<!-- more -->
 ### 1.必要なもの
 必須項目に
 ・本体(1.10.162.0以上)
@@ -24,7 +24,6 @@ Fallout4でmodを入れているとCTDが起きることがあるため、CTD対
 ・[Microsoft Visual C++ Redistributable for Visual Studio 2019](https://fallout4.2game.info/jump.php?https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads)
 とあるので導入していく。
 導入されているmodによっては動かないこともあるので確認してほしい
-<!-- more -->
 
 ### 導入成功
 無事導入に成功した、普通に遊んでいると`/Document/My Games/Fallout4/F4SE下にcrash-log`と生成されるので中身を読んでみる。
