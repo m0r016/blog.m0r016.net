@@ -14,7 +14,7 @@ Fediverseを眺めていたら、[matrix](https://www.matrix.org/)というチ�
 <!-- toc -->
 <!-- more -->
 ### matrixとは
-matrixは、SlackやDiscordのようなコミュニケーションツールであり、まずメッセージのやり取り、通話機能、E2Eでの通話暗号化、ブリッジ機能がある。
+matrixは、SlackやDiscordのようなコミュニケーションツールであり、メッセージのやり取り、通話機能、E2Eでの通話暗号化、ブリッジ機能がある。
 
 ### 環境
 OS: Ubuntu 20.04LTS
