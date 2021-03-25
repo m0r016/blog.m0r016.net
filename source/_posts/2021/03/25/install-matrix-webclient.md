@@ -11,6 +11,8 @@ description: "matrixを構築する。"
 matrixのwebclientが存在するらしいのでビルドする。
 ソースは[ここから](https://github.com/vector-im/element-web)。
 
+<!-- toc -->
+<!-- more -->
 ### 1.nginxをいじる
 nginxの設定ファイルにアクセスし、設定を書き足す。
 ```
