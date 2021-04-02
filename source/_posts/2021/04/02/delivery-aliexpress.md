@@ -14,6 +14,8 @@ description: "AliExpressで頼んだものが届くまで"
 ネットサーフィンをしていたら自分で修理できるらしい。
 どうせ壊れてもいい端末なので、治してみようと思ったのでタッチパネルを注文した。
 
+<!-- toc -->
+<!-- more -->
 ### 注文
 [AliExpress](https://www.aliexpress.com/)にアクセスし、[SO-04E用のタッチパネル](https://ja.aliexpress.com/item/1000005638515.html?spm=a2g0s.9042311.0.0.c6944c4dqaoF0e)を注文する。
 中国からか・・・無料配送なのはすごいと思い注文した。
