@@ -45,7 +45,7 @@ pip install --upgrade setuptools
 pip install matrix-synapse
 ```
 
-updateする際は`source ~/synapse/env/bin/activate && pip install -U matrix-synapse`を実行するといいらしい・・・？
+updateする際は`source ~/synapse/env/bin/activate && pip install -U matrix-synapse`を実行するといいらしい。
 
 ### 3.configの生成
 matrixを設定していく。
@@ -238,4 +238,8 @@ sudo systemctl start matrix.slum.cloud
 sudo systemctl enable matrix.slum.cloud
 ```
 これでデーモン化することができる。
-[参考](https://github.com/matrix-org/synapse/blob/master/contrib/systemd/matrix-synapse.service#L17)
+
+### 参考
+・[MatrixのHomeserver、SynapseをDebian 10にインストールする](https://qiita.com/eniehack/items/268f5903d50fcd8dc309)
+・[Slack系 分散SNS「Matrix」を構築する](https://qiita.com/guskma/items/20fa88c25bfdbfc99c2a)
+・[systemd](https://github.com/matrix-org/synapse/blob/master/contrib/systemd/matrix-synapse.service#L17)
