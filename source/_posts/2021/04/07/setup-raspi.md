@@ -1,5 +1,5 @@
 ---
-title: Raspberry Piをセットアップする。
+title: Raspberry Piをセットアップする - 前編 -
 date: 2021-04-07 11:00:15
 categories: [RaspberryPi]
 tags: 
