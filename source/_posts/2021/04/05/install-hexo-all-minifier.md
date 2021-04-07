@@ -1,10 +1,10 @@
 ---
-title: install-hexo-all-minifier
+title: サイトの読み込み速度を高速化する。
 date: 2021-04-05 11:39:35
 categories: [blog, hexo, plugin]
 tags:
 - hexo-all-minifier
-description: "hexoのテーマをapolloからicarusに変更する"
+description: "サイトの読み込み速度を高速化する。"
 ---
 ### はじめに
 サイトを運営することによって気にすることは何が。
@@ -12,6 +12,8 @@ description: "hexoのテーマをapolloからicarusに変更する"
 転送量が増えると外部回線で見ているものはより料金がかかるしストレスを生む。
 そうしないためにいくらか圧縮をかけてあげる必要がある。
 
+<!-- toc -->
+<!-- more -->
 ### 1.サイトの読み込み時間を確認する。
 Googleが読み込み速度を確認するサイトを用意してくれているのでそこで確認する→[Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)
 
@@ -56,3 +58,4 @@ hexo.extend.filter.register('after_post_render', function(data){
 {% asset_img mobile-lazy.png %}
 
 ぐぬぬ・・・もう少し調べる必要がある。
+
