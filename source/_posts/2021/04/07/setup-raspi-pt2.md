@@ -1,7 +1,7 @@
 ---
 title: Raspberry Piをセットアップする - 後編 -
 date: 2021-04-07 14:27:03
-updated: 2021-04-18 14:12:00
+updated: 2021-04-08 14:12:00
 categories: [RaspberryPi]
 tags: 
 - Raspberry Pi SetUp
