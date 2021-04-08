@@ -1,7 +1,7 @@
 ---
 title: ラズパイを用いて重量を図ってみる。
 date: 2021-03-05 15:04:38
-updated: 2021-04-18 13:45:00
+updated: 2021-04-08 13:45:00
 categories: [RaspberryPi, loadcell, hx711]
 tags: 
 - raspi-loadcell

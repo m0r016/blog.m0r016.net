@@ -1,6 +1,7 @@
 ---
 title: Raspberry Piをセットアップする - 前編 -
 date: 2021-04-07 11:00:15
+updated: 2021-04-08 14:20:00
 categories: [RaspberryPi]
 tags: 
 - Raspberry Pi SetUp
@@ -23,7 +24,7 @@ LANは1000BASE-T対応など、3B+のほうがアップグレードされてい�
 `Download for Windows`をクリック
 {% asset_img download-imager.png %}
 
-`imager_X.X.X.exe`を開く。恐らくUACが出てくるので「はい」を押す。
+`imager_X.X.X.exe`を開く。おそらくUACが出てくるので「はい」を押す。
 インストールを選択。
 {% asset_img install-imager.png %}
 

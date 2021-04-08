@@ -1,7 +1,7 @@
 ---
 title: Raspberry Piをセットアップする - 後編 -
 date: 2021-04-07 14:27:03
-updated: 2021-04-08 14:12:00
+updated: 2021-04-08 14:22:00
 categories: [RaspberryPi]
 tags: 
 - Raspberry Pi SetUp
@@ -13,25 +13,33 @@ tags:
 <!-- toc -->
 <!-- more -->
 ### 1.ユーザーを作成する。
-ubuntuでもいいのだが、せっかくだしHNのm0r016を使う。`sudo adduser m0r016`
+ubuntuでもいいのだが、せっかくだしHNのm0r016を使う。
+`sudo adduser m0r016`
 パスワードを聞かれるので適当にタイプ。名前を聞かれるが未記入で。
 `Is the information correct`はEnter
-sudoも与えておく。`sudo gpasswd -a m0r016 sudo
+sudoも与えておく。
+`sudo gpasswd -a m0r016 sudo`
 `su - m0r016`でm0r016にログイン。
 
 ### 2.タイムゾーンの変更。
 `date`とタイプ。
-UTCになっているので日本時間に変更する。`sudo timedatectl set-timezone Asia/Tokyo`。
+UTCになっているので日本時間に変更する。
+`sudo timedatectl set-timezone Asia/Tokyo`。
 `date`で確認。JSTになっている。
 
 ### 3.hostnameの変更。
 今の状態では`ubuntu`と割り当てられているが、わかりやすいようにhostnameを変更する。
-このマシンはリレーサーバにする予定なので`sudo hostnamectl set-hostname magi-system-relay`とタイプ。再ログインする。
+このマシンはリレーサーバにする予定なので
+`sudo hostnamectl set-hostname magi-system-relay`
+とタイプ。
+
+再ログインする。
 `m0r016@magi-system-relay`。反映された。
 
 ### 4.ipアドレスを固定する。
 このままでは勝手にipアドレスが変わってしまうので固定する。
-`ip l`とタイプ、`2: eth0:`と書かれている。
+`ip l`
+とタイプ、`2: eth0:`と書かれている。
 NICの名前はeth0らしい。これを覚えておく。
 設定ファイルを変更する
 ```
@@ -55,7 +63,8 @@ network:
     version: 2
 ```
 `addresses`は割り当てたいアドレスを。`gateway`はゲートウェイ、`nameservers`内の`addresses`はネームサーバーだ。
-`sudo netplan apply`と打つとipアドレスが即座に変更されて、ssh接続が確立されなくなるので注意。
+`sudo netplan apply`
+と打つとipアドレスが即座に変更されて、ssh接続が確立されなくなるので注意。
 
 ### 5.swapの作成。
 RAM1GBでは足らないので2GBのswapを作成する。
@@ -123,6 +132,8 @@ sudo nano /etc/dphys-swapfile
 #CONF_MAXSWAP=2048
 ```
 
-`sudo service dphys-swapfile restart`で反映だ。
-`htop`で確認する。`Swp`が`2G`であれば問題ない。
+`sudo service dphys-swapfile restart`
+で反映だ。
+`htop`で確認する。
+`Swp`が`2G`であれば問題ない。
 ざっくり設定するのはこの程度かな。お疲れさまでした。
