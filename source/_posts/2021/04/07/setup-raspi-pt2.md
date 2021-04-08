@@ -1,6 +1,7 @@
 ---
 title: Raspberry Piをセットアップする - 後編 -
 date: 2021-04-07 14:27:03
+updated: 2021-04-18 14:12:00
 categories: [RaspberryPi]
 tags: 
 - Raspberry Pi SetUp
@@ -9,6 +10,8 @@ tags:
 [前編](https://blog.m0r016.net/2021/04/07/setup-raspi/)では、Raspberry Pi 3BにUbuntu 20.04 LTSをインストールした。
 ここではRaspberry Piにいろいろ設定を加えていく。
 
+<!-- toc -->
+<!-- more -->
 ### 1.ユーザーを作成する。
 ubuntuでもいいのだが、せっかくだしHNのm0r016を使う。`sudo adduser m0r016`
 パスワードを聞かれるので適当にタイプ。名前を聞かれるが未記入で。

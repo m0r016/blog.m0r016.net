@@ -1,6 +1,7 @@
 ---
 title: ラズパイを用いて重量を図ってみる。
 date: 2021-03-05 15:04:38
+updated: 2021-04-18 13:45:00
 categories: [RaspberryPi, loadcell, hx711]
 tags: 
 - raspi-loadcell
@@ -71,7 +72,7 @@ CN1-4, 5はBチャンネル用なので使用しない。
 |線の色|ラズパイ側|
 |---:|---:|
 |VDD|2(5v)|
-|DAT|39(GPIO5)|
+|DAT|29(GPIO5)|
 |CLK|31(GPIO6)|
 |GND|6(GND)|
 |INNB|none|

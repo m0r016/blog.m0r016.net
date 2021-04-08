@@ -97,6 +97,7 @@ deploy:
   branch: public
 google_maps_api_key: AIzaSyBLKH8v9F7BDoirzA7-zJNAy7HrdXGEFQc
 all_minifier: true
+use_date_for_updated: true
 #filter_optimize:
 #  enable: true
   # remove the surrounding comments in each of the bundled files
