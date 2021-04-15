@@ -1,10 +1,11 @@
 ---
 title: Raspberry Piをセットアップする - 前編 -
 date: 2021-04-07 11:00:15
-updated: 2021-04-08 14:20:00
+updated: 2021-04-15 10:49:00
 categories: [RaspberryPi]
 tags: 
 - Raspberry Pi SetUp
+description: "Raspberry Piをセットアップする - 前編 -"
 ---
 ### はじめに
 一台余っている[Raspberry Pi](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)があるのでセットアップする。

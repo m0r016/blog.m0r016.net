@@ -1,10 +1,11 @@
 ---
 title: Raspberry Piをセットアップする - 後編 -
 date: 2021-04-07 14:27:03
-updated: 2021-04-08 14:22:00
+updated: 2021-04-13 10:48:00
 categories: [RaspberryPi]
 tags: 
 - Raspberry Pi SetUp
+description: "Raspberry Piをセットアップする - 後編 -"
 ---
 ### はじめに
 [前編](https://blog.m0r016.net/2021/04/07/setup-raspi/)では、Raspberry Pi 3BにUbuntu 20.04 LTSをインストールした。
