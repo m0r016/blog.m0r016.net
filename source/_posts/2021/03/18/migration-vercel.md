@@ -1,6 +1,7 @@
 ---
 title: vercelに乗り換える
 date: 2021-03-18 11:33:26
+updated: 2021-04-16 19:49:00
 categories: [blog, hexo, vercel]
 tags:
 - vercel
@@ -43,10 +44,10 @@ DNSに追加してよと言われるので、言われたとおりにする
 
 ### 2.pingを打ってみる。
 github pagesからvercelで配信されているのか調べるために、pingを打ってみた。
-```
+{% codeblock terminal lang:bash line_number:false %}
 ping blog.m0r016.net
 PING cname.vercel-dns.com (76.76.21.21) 56(84) bytes of data.
-```
+{% endcodeblock %}
 きちんと配信されていることがわかる。
 
 ### おわりに

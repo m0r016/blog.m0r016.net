@@ -1,7 +1,7 @@
 ---
 title: Raspberry Piをセットアップする - 前編 -
 date: 2021-04-07 11:00:15
-updated: 2021-04-15 10:49:00
+updated: 2021-04-16 21:02:00
 categories: [RaspberryPi]
 tags: 
 - Raspberry Pi SetUp
@@ -59,45 +59,45 @@ LANは1000BASE-T対応など、3B+のほうがアップグレードされてい�
 書き込みが終わったらSDカードにアクセスする。
 私の場合`system-boot`だった。拡張子のないファイル[ssh]を作る。
 Wifiを使う場合、`network-config`を編集する。
-``` network-config
-# This file contains a netplan-compatible configuration which cloud-init
-# will apply on first-boot. Please refer to the cloud-init documentation and
-# the netplan reference for full details:
-#
-# https://cloudinit.readthedocs.io/
-# https://netplan.io/reference
-#
-# Some additional examples are commented out below
+{% codeblock network-config lang:diff %}
+// This file contains a netplan-compatible configuration which cloud-init
+// will apply on first-boot. Please refer to the cloud-init documentation and
+// the netplan reference for full details:
+//
+// https://cloudinit.readthedocs.io/
+// https://netplan.io/reference
+//
+// Some additional examples are commented out below
 
 version: 2
 ethernets:
   eth0:
     dhcp4: true
     optional: true
-+wifis:
++ wifis:
 +  wlan0:
 +    dhcp4: true
 +    optional: true
 +    access-points:
 +      "wifi-ssid":
 +        password: "wifi-password"
-#wifis:
-#  wlan0:
-#    dhcp4: true
-#    optional: true
-#    access-points:
-#      myhomewifi:
-#        password: "S3kr1t"
-#      myworkwifi:
-#        password: "correct battery horse staple"
-#      workssid:
-#        auth:
-#          key-management: eap
-#          method: peap
-#          identity: "me@example.com"
-#          password: "passw0rd"
-#          ca-certificate: /etc/my_ca.pem
-```
+// wifis:
+//  wlan0:
+//    dhcp4: true
+//    optional: true
+//    access-points:
+//      myhomewifi:
+//        password: "S3kr1t"
+//      myworkwifi:
+//        password: "correct battery horse staple"
+//      workssid:
+//        auth:
+//          key-management: eap
+//          method: peap
+//          identity: "me@example.com"
+//          password: "passw0rd"
+//          ca-certificate: /etc/my_ca.pem
+{% endcodeblock %}
 `wifi-ssid`はwi-fiのssid、`wifi-password`はwi-fiのpasswordをタイプ。
 
 編集できたら取り出し、ラズパイに入れる。

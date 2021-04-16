@@ -1,6 +1,7 @@
 ---
 title: Ubuntuを自動アップデートする
 date: 2021-03-10 00:40:47
+updated: 2021-04-16 19:34:00
 categories: [ubuntu]
 tags:
 - ubuntu
@@ -17,16 +18,14 @@ Ubuntu使う際に毎回`sudo apt update && sudo apt upgrade`を打つのがめ�
 ### 1./etc/apt/apt.conf.d/20auto-upgradesを編集する
 /etc/apt/apt.conf.d/にはパッケージ管理システム`apt`の設定が含まれている。
 `20auto-upgrades`を確認しなければならないので一応確認する。
-```
-nano /etc/apt/apt.conf.d/
+{% codeblock /etc/apt/apt.conf.d/20auto-upgrades lang:bash %}
 APT::Periodic::Update-Package-Lists "1"; #自動でパッケージリストをアップデートするか
 APT::Periodic::Unattended-Upgrade "1"; #自動でアップデートするか
-```
+{% endcodeblock %}
 
 ### 2./etc/apt/apt.conf.d/50unattended-upgradesを編集する
 自動アップデートの設定だ。自分に合わせ、適所変更してほしい。
-```
-nano /etc/apt/apt.conf.d/50unattended-upgrades
+{% codeblock /etc/apt/apt.conf.d/50unattended-upgrades lang:diff %}
 // Automatically upgrade packages from these (origin:archive) pairs
 //
 // Note that in Ubuntu security updates may pull in new dependencies
@@ -41,7 +40,8 @@ Unattended-Upgrade::Allowed-Origins {
         // should also install from here by default.
         "${distro_id}ESMApps:${distro_codename}-apps-security";
         "${distro_id}ESM:${distro_codename}-infra-security";
-        "${distro_id}:${distro_codename}-updates";
+- //    "${distro_id}:${distro_codename}-updates";
++       "${distro_id}:${distro_codename}-updates";
 //      "${distro_id}:${distro_codename}-proposed";
 //      "${distro_id}:${distro_codename}-backports";
 };
@@ -115,13 +115,15 @@ Unattended-Upgrade::DevRelease "auto";
 
 // Automatically reboot *WITHOUT CONFIRMATION* if
 //  the file /var/run/reboot-required is found after the upgrade
-Unattended-Upgrade::Automatic-Reboot "true";
+- Unattended-Upgrade::Automatic-Reboot "false";
++ Unattended-Upgrade::Automatic-Reboot "true";
 // 自動で適用してほしいのでtrue
 
 // If automatic reboot is enabled and needed, reboot at the specific
 // time instead of immediately
 //  Default: "now"
-Unattended-Upgrade::Automatic-Reboot-Time "05:00";
+- Unattended-Upgrade::Automatic-Reboot-Time "02:00";
++ Unattended-Upgrade::Automatic-Reboot-Time "05:00";
 // 再起動する時間を決める。24時間表記だ
 
 // Use apt bandwidth limit feature, this example limits the download
@@ -151,7 +153,7 @@ Unattended-Upgrade::Automatic-Reboot-Time "05:00";
 
 // Allow package downgrade if Pin-Priority exceeds 1000
 // Unattended-Upgrade::Allow-downgrade "false";
-```
+{% endcodeblock %}
 
 ### 3.保存して終了
 動作確認をし終了。

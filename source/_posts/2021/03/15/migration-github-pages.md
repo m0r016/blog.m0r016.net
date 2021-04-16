@@ -1,6 +1,7 @@
 ---
 title: netlifyからgithub pagesに乗り換える
 date: 2021-03-15 14:40:34
+updated: 2021-04-16 19:47:00
 categories: [blog, hexo, github-pages]
 tags:
 - github-pages
@@ -20,33 +21,31 @@ netlify同様、githubに上げたリポジトリをもとに、自動的に生�
 
 ### 1.ブランチを作成する
 github pagesではリポジトリではなく、ブランチ単位で生成できるため、ブランチを生成する
-
-```
+{% codeblock terminal lang:bash line_number:false %}
 git branch public
-```
+{% endcodeblock %}
 
 ### 2.hexo-deployer-gitをインストールする
 hexoにデプロイさせるため拡張機能をインストールする
-```
+{% codeblock terminal lang:bash line_number:false %}
 npm install hexo-deployer-git --save
-```
+{% endcodeblock %}
 
 インストールが完了したら、[hexo-deployer-git](https://github.com/hexojs/hexo-deployer-git)をもとに設定を行う。`_config.yml`を開き、追加していく。
-```
-nano _config.yml
-deploy:
-  type: git
-  repo: your_repo
-  branch: public
-```
+{% codeblock _config.yml lang:diff %}
++ deploy:
++   type: git
++   repo: your_repo
++   branch: public
+{% endcodeblock %}
 
 _config.ymlを保存する。
 
 ### 3.deployする
 設定が完了したため、deployしていく。
-```
+{% codeblock terminal lang:bash line_number:false %}
 hexo clean && hexo deploy
-```
+{% endcodeblock %}
 デプロイが完了したら自分のリポジトリにアクセスし、Settingをクリック
 {% asset_img github-pages.png %}
 
@@ -63,10 +62,10 @@ DNSのみにしておかないと、いろいろとめんどくさいので注�
 
 ### 4.pingを打ってみる。
 本当にnetlifyからgithub pagesで配信されているのか調べるために、pingを打ってみた。
-```
+{% codeblock terminal lang:bash line_number:false %}
 ping blog.m0r016.net
 PING m0r016.github.io (185.199.109.153) 56(84) bytes of data.
-```
+{% endcodeblock %}
 きちんと配信されていることがわかる。
 
 ### おわりに

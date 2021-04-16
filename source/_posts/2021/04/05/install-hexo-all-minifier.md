@@ -1,6 +1,7 @@
 ---
 title: サイトの読み込み速度を高速化する。
 date: 2021-04-05 11:39:35
+updated: 2021-04-16 21:00:00
 categories: [blog, hexo, plugin]
 tags:
 - hexo-all-minifier
@@ -43,15 +44,16 @@ vercelだからできたこと。
 もうちょいましにならないか調べてみる。
 
 ### 4.画像を遅延読み込みにする。
-調べていたところ、このようなものを発見。[Hexoで画像にloading="lazy"を自動で追加して画像を遅延読み込みする](https://pixelog.net/post/vo9d9z/)
+調べていたところ、このようなものを発見。
+[Hexoで画像にloading="lazy"を自動で追加して画像を遅延読み込みする](https://pixelog.net/post/vo9d9z/)
 `themes/icarus/scripts/`に`lazyload.js`というファイルを作成し、
 中身をこのようにする
-```javascript
+{% codeblock themes/icarus/scripts/lazyload.js lang:javascript %}
 hexo.extend.filter.register('after_post_render', function(data){
   data.content = data.content.replace(/<img src=/g, '<img loading="lazy" src=');
   return data;
 });
-```
+{% endcodeblock %}
 
 これでどうだろうか
 {% asset_img pc-lazy.png %}
