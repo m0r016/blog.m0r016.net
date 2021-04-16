@@ -1,6 +1,7 @@
 ---
 title: shareボタンを導入する
 date: 2021-03-06 23:17:11
+updated: 2021-04-16 14:47:00
 categories: [blog, hexo, share-botton]
 tags:
 - share-botton
@@ -11,45 +12,43 @@ description: "hexoにshareボタンを導入する"
 
 ### 実行したこと
 hexoにshareボタンを導入する
-
-### 目次
 <!-- toc -->
-
 <!-- more -->
 
 ### 1.icarusをforkする
 どうせなら変更もgithub上で管理できるようにしておきたいので[icarus](https://github.com/ppoffice/hexo-theme-icarus)をforkする。forkしたものをsubmoduleとして追加。
-```
+{% codeblock terminal lang:bash %}
 git submodule add https://github.com/m0r016/hexo-theme-icarus.git
-```
+{% endcodeblock %}
 これでsubmoduleとして追加することができた。
 
 ### 2._config.icarus.ymlを編集する
 shareを探す。
-```yml
-# Share plugin configurations
-# https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Share/
+{% codeblock _config.icarus.yml lang:diff first_line:187 %}
 share:
     type: sharethis
-    # URL to the ShareThis share plugin script
     install_url: ''
-```
+{% endcodeblock %}
 とある。
 [ここ](https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Share/)に設定の変更方法が書いてあるらしいので見てみる。
 
 addtoanyがシンプルに済みそうだ。addtoanyに変更
-```yml
+{% codeblock _config.icarus.yml lang:diff first_line:187 %}
 share:
-    type: addtoany
-```
++    type: addtoany
+-    type: sharethis
+-    install_url: ''
+{% endcodeblock %}
 
 ### 3.share bottonを取得する
 [AddToAny](https://www.addtoany.com/)で取得できるらしい。
-"Get the Share Botton"とあるのでクリック、"Any Website"を選択。"Choose Services"で適当に選択。"Get Button Code"で必要なコードを入手することができる。
+"Get the Share Botton"とあるのでクリック、"Any Website"を選択。
+"Choose Services"で適当に選択。
+"Get Button Code"で必要なコードを入手することができる。
 
 ### 4.shareボタンの設定
 AddToAnyの[レイアウトファイル](https://github.com/ppoffice/hexo-component-inferno/blob/0.2.2/src/view/share/addtoany.jsx)をリポジトリから引っ張ってくる必要があるらしい。これを`/themes/icarus/layout/search/addtoany.jsx`に書き込み、AddToAnyで入手したコードを貼り付ける。
-```jsx
+{% codeblock /themes/icarus/layout/share/addtoany.jsx lang:diff first_line:5 %}
 const { Component, Fragment } = require('inferno');
 - const { cacheComponent } = require('../../util/cache');
 + const { cacheComponent } = require('hexo-component-inferno/lib/util/cache');
@@ -79,7 +78,7 @@ class AddToAny extends Component {
         </Fragment>;
     }
 }
-```
+{% endcodeblock %}
 保存して終了。
 
 ### 5.動作確認

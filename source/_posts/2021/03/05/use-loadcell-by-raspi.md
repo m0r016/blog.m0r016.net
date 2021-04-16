@@ -1,32 +1,25 @@
 ---
 title: ラズパイを用いて重量を図ってみる。
 date: 2021-03-05 15:04:38
-updated: 2021-04-08 13:45:00
+updated: 2021-04-15 20:17:00
 categories: [RaspberryPi, loadcell, hx711]
 tags: 
 - raspi-loadcell
 thumbnail: "/2021/03/05/use-loadcell-by-raspi/raspi.jpg"
 cover: "/2021/03/05/use-loadcell-by-raspi/raspi-title.png"
 ---
-
-### 目次
-<!-- toc -->
-
 ### はじめに
 ロードセルという重量を図るものをRaspberry Piに接続し、それを見ることはできないか、と言われ調べてやってみたことをここに記す。
 Googleで検索してみてもこの話題は出てこないため、少しでも参考になればいいなと思う。
-
+<!-- toc -->
+<!-- more -->
 ### 環境
-
 ・SSH接続が可能な[Raspberry Pi 3b+](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/) (Python 2.7.16 Raspbian)
 ・ロードセル([VLS-50K](https://www.valcom.co.jp/product/lc/vls/))
 ・ADコンバータ([hx711](https://akizukidenshi.com/catalog/g/gK-12370/))
 ・[ジャンパ線](https://akizukidenshi.com/catalog/g/gC-08934/)
 ・ネット環境
-
-<!-- more -->
 ### 1.ADコンバータを組み立てる
-
 入手できた[hx711](https://akizukidenshi.com/catalog/g/gK-12370/)は端子台の取り付けが必要だったためはんだ付けを施した。
 出来栄えはこんな感じ↓
 
@@ -90,13 +83,13 @@ GPIOのポートについてはここを参考にしてほしい→[GPIO](https:
 
 リポジトリはtatobari氏のものを使った→[tatobari](https://github.com/tatobari/hx711py)
 
-```console
+{% codeblock terminal lang:bash %}
 ssh [id]@[ipaddress]
 git clone https://github.com/tatobari/hx711py
 cd hx711py
 python setup.py install
 python example.py
-```
+{% endcodeblock %}
 
 コンソール上に数字列が数秒おきに出力された。成功だ。
 
