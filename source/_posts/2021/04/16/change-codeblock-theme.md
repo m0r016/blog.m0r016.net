@@ -13,6 +13,8 @@ description: "従来のcodeblockの配色が気に入らないので変更する
 {% asset_img codeblock.png %}
 従来のcodeblockの配色が気に入らないので変更する
 
+<!-- toc -->
+<!-- more-->
 ### _config.icarus.ymlを変更する
 色々調べていたところ、`_config.icarus.yml`の`highlight`を変更すればいいという。実際にやってみる。
 {% codeblock _config.icarus.yml lang:diff first_line:125 %}
