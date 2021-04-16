@@ -1,7 +1,7 @@
 ---
 title: ラズパイを用いて重量を図ってみる。
 date: 2021-03-05 15:04:38
-updated: 2021-04-15 20:17:00
+updated: 2021-04-16 15:57:00
 categories: [RaspberryPi, loadcell, hx711]
 tags: 
 - raspi-loadcell
@@ -81,9 +81,9 @@ GPIOのポートについてはここを参考にしてほしい→[GPIO](https:
 
 接続ができたら動作確認をする。(SSH,Python実行環境は既に構築できているものとする)
 
-リポジトリはtatobari氏のものを使った→[tatobari](https://github.com/tatobari/hx711py)
+リポジトリはtatobari氏のものを使った→[tatobari/hx711py](https://github.com/tatobari/hx711py)
 
-{% codeblock terminal lang:bash %}
+{% codeblock terminal lang:bash line_number:false %}
 ssh [id]@[ipaddress]
 git clone https://github.com/tatobari/hx711py
 cd hx711py

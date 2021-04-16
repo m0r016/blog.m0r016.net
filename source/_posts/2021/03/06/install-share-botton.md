@@ -1,7 +1,7 @@
 ---
 title: shareボタンを導入する
 date: 2021-03-06 23:17:11
-updated: 2021-04-16 14:47:00
+updated: 2021-04-16 16:01:00
 categories: [blog, hexo, share-botton]
 tags:
 - share-botton
@@ -17,7 +17,7 @@ hexoにshareボタンを導入する
 
 ### 1.icarusをforkする
 どうせなら変更もgithub上で管理できるようにしておきたいので[icarus](https://github.com/ppoffice/hexo-theme-icarus)をforkする。forkしたものをsubmoduleとして追加。
-{% codeblock terminal lang:bash %}
+{% codeblock terminal lang:bash line_number:false %}
 git submodule add https://github.com/m0r016/hexo-theme-icarus.git
 {% endcodeblock %}
 これでsubmoduleとして追加することができた。

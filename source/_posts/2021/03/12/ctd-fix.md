@@ -1,6 +1,7 @@
 ---
 title: Fallout4のCTDの原因を突き止める
 date: 2021-03-12 11:54:00
+updated: 2021-04-16 16:00:00
 categories: [PC, Game, Fallout4]
 tags: Fallout4
 description: "Fallout4のCTDの原因を突き止める"
@@ -27,7 +28,7 @@ Fallout4でmodを入れているとCTDが起きることがあるため、CTD対
 
 ### 導入成功
 無事導入に成功した、普通に遊んでいると`/Document/My Games/Fallout4/F4SE下にcrash-log`と生成されるので中身を読んでみる。
-```log
+{% codeblock crash-log lang:log %}
 Fallout 4 v1.10.163
 Buffout 4 v1.20.3
 
@@ -78,11 +79,11 @@ PROBABLE CALL STACK:
 	[6] 0x7FF710B0CFED Fallout4.exe+1B1CFED -> 1079791+0x3D
 	[7] 0x7FFF3E587034 KERNEL32.DLL+0017034
 	[8] 0x7FFF3FF3D241    ntdll.dll+004D241
-…
-```
+
+{% endcodeblock %}
 とあるが、4行目の`Unhandled exception "EXCEPTION_ACCESS_VIOLATION" at 0x7FF710CC74CD Fallout4.exe+1CD74CD`や41行目の`PROBABLE CALL STACK:`以下が原因となっているらしい。
-この場合、1CD74CDが真っ先に引っかかるのでロードオーダーを見てみる。
-1Cがロードオーダーの番号だ。
+この場合、`1CD74CD`が真っ先に引っかかるのでロードオーダーを見てみる。
+`1C`がロードオーダーの番号だ。
 すると以外にも装備modが出てきた。
 抜いてみると、確かにCTDが減っていて、突然ゲームが落ちてしまうなどというストレスが減った。
 
