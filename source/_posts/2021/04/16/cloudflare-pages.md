@@ -1,5 +1,5 @@
 ---
-title: cloudflare-pages
+title: cloudflare pagesを使ってみる。
 date: 2021-04-16 22:01:32
 categories: [blog, hexo, cloudflare-pages]
 tags:
