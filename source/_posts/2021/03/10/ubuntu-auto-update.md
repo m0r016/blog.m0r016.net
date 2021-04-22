@@ -2,7 +2,7 @@
 title: Ubuntuを自動アップデートする
 date: 2021-03-10 00:40:47
 updated: 2021-04-16 19:34:00
-categories: [ubuntu]
+categories: [Ubuntu]
 tags:
 - ubuntu
 description: "ubuntuを自動アップデートする"
