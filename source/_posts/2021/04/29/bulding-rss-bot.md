@@ -1,6 +1,7 @@
 ---
 title: MastodonにAtomの情報を投稿する。
 date: 2021-04-29 00:47:20
+updated: 2021-04-29 00:47:20
 categories: [Fediverse, Mastodon]
 tags:
 - Mastodon
@@ -26,7 +27,7 @@ pip install feediverse
 {% endcodeblock %}
 
 ### 3.設定する
-{% codeblock terminal lang:bash line_number:false %}
+{% codeblock terminal line_number:false %}
 $ feediverse
 What is your Mastodon Instance URL? your_instance
 Do you have your app credentials already? [y/n] n
@@ -59,8 +60,10 @@ updated: '2021-04-28T15:37:15.281000+00:00'
 url: slum.cloud
 {% endcodeblock %}
 
-### crontabに設定する。
+### 4.crontabに設定する。
 `*/15 * * * * /usr/local/bin/feediverse`と最後に表示されたが、実際は`/home/$user/.local/bin/feediverse`にあった。
 もちろん個人個人の環境で変わってくるので`which feediverse`で場所を確認しよう。
 `crontab -e`とタイプし、`*/15 * * * * /home/$user/.local/bin/feediverse`とタイプすれば15分おきに設定したフィードをチェックし、投稿される。
 
+### 参考
+・[勝手 Mastodon tootctl リファレンス](https://qiita.com/neustrashimy/items/870769d7db4d95cde238)

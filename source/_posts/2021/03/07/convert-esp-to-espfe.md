@@ -1,6 +1,7 @@
 ---
 title: Fallout4のespファイルが増えてきたのでespFE化する
 date: 2021-03-07 15:57:30
+updated: 2021-03-07 15:57:30
 categories: [PC, Game, Fallout4]
 tags: Fallout4
 description: "Modを入れていくうちにespファイルが多くなってしまったのでespFE化をする。"

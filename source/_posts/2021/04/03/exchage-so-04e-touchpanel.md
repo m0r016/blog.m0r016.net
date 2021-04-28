@@ -1,6 +1,7 @@
 ---
 title: タッチ切れを起こしたSO-04Eの液晶を交換する。
 date: 2021-04-03 03:20:40
+updated: 2021-04-03 03:20:40
 categories: [so-04e]
 tags:
 - so-04e

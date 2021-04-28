@@ -1,6 +1,7 @@
 ---
 title: timerを使わず、serviceのみで再起動させる。
 date: 2021-04-18 02:32:32
+updated: 2021-04-18 02:32:32
 categories: [Ubuntu, systemd]
 tags:
 - systemd

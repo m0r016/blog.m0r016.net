@@ -1,6 +1,7 @@
 ---
 title: among usの生年月日設定を削除する。
 date: 2021-03-23 01:37:22
+updated: 2021-03-23 01:37:22
 categories: [PC, Game, Among Us]
 tags:
 - amongus

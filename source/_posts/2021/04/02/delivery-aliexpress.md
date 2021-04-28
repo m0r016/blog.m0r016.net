@@ -1,6 +1,7 @@
 ---
 title: AliExpressで頼んだものが届くまで
 date: 2021-04-02 15:39:50
+updated: 2021-04-02 15:39:50
 categories: [ali-express]
 tags:
 - ali-express

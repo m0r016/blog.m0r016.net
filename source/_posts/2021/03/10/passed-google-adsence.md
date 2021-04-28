@@ -1,6 +1,7 @@
 ---
 title: Google Adsenseに通った話
 date: 2021-03-10 20:02:20
+updated: 2021-03-10 20:02:20
 categories: [雑記]
 tags:
 - Adsense

@@ -1,6 +1,7 @@
 ---
 title: PosgtreSQLを調整し、Pleromaのレスポンスを向上する。
 date: 2021-04-28 21:27:56
+updated: 2021-04-28 21:27:56
 categories: [Fediverse, pleroma, postgresql]
 tags:
 - postgresql

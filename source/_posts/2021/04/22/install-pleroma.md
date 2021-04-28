@@ -1,7 +1,7 @@
 ---
 title: PleromaをRaspberry piにインストールする
 date: 2021-04-22 11:39:02
-updated: 2021-04-23 02:54:00
+updated: 2021-04-29 01:26:00
 categories: [Fediverse, pleroma]
 tags:
 - pleroma
@@ -447,6 +447,8 @@ sudo systemctl enable --now pleroma.service
 と打って終了。
 これで無事にデーモン化しPleromaを構築することができた。
 
+一応問題はないが、Raspberry Piの場合、チューニングが必要になることがある。
+{% post_link tunning-pleroma 'PosgtreSQLを調整し、Pleromaのレスポンスを向上する。'%} が参考になるだろう。 
 ### 改善点
 ・[https://wut.m0r016.net/web](https://wut.m0r016.net/web)にアクセスしたときに`The VAPID public key is not set. You will not be able to receive Web Push Notifications.`及び`GET https://wut.m0r016.net/api/v1/announcements 404`と出てしまう問題を対処
 ・[Soapbox](https://soapbox.pub/)を組んでみる。
