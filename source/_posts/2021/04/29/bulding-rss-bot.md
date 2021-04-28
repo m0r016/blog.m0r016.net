@@ -10,6 +10,8 @@ description: "MastodonにAtomの情報を投稿する。"
 このサイトでは[Atom](https://blog.m0r016.net/atom.xml)を設置している。
 Mastodon上にbotを作り、Atomフィードを投稿させるいい手段がないかなと思って探していたら、次のようなリポジトリを発見[feediverse](https://github.com/edsu/feediverse)。設定していく。
 
+<!-- toc -->
+<!-- more -->
 ### 1.botアカウントを作成する
 {% codeblock terminal lang:bash line_number:false %}
 su - mastodon 
