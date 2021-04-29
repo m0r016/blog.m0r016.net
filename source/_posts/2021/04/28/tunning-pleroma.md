@@ -1,7 +1,7 @@
 ---
 title: PosgtreSQLを調整し、Pleromaのレスポンスを向上する。
 date: 2021-04-28 21:27:56
-updated: 2021-04-28 21:27:56
+updated: 2021-04-30 03:53:00
 categories: [Fediverse, pleroma, postgresql]
 tags:
 - postgresql
@@ -14,7 +14,7 @@ description: "PosgtreSQLを調整し、Pleromaのレスポンスを向上する�
 
 <!-- toc -->
 <!-- more -->
-### Pleroma側の調整
+### 1.Pleroma側の調整
 {% codeblock /opt/pleroma/config/prod.secret.exs lang:diff %}
 config :pleroma, Pleroma.Repo,
   adapter: Ecto.Adapters.Postgres,
@@ -29,7 +29,7 @@ config :pleroma, Pleroma.Repo,
 + config :pleroma, :dangerzone, override_repo_pool_size: true
 {% endcodeblock %}
 
-### PostgreSQL側の設定
+### 2.PostgreSQL側の設定
 postgresqlの設定ファイルは大体`/etc/postgresql/$VER/main/`下に存在する。
 この`postgresql.conf`は`pg_createcluster`をしたときにしか生成されないのであらかじめバックアップを取っておく。$VERはpostgresqlのバージョン
 {% codeblock terminal lang:bash line_number:false %}
@@ -91,3 +91,24 @@ DB Versionは12, OS TypeはLinux, DB TypeはWeb application, Total Memory(RAM)�
 {% endcodeblock %}
 書き換えたら`sudo service pleroma restart`をして完了
 
+### 3.再起動を組み込む。
+{% post_link improvement-systemd 'timerを使わず、serviceのみで再起動させる。' %}を参考に再起動するようにしておく。
+
+{% codeblock /etc/systemd/system/pleroma.service lang:diff %}
+[Unit]
+Description=Pleroma social network
+After=network.target postgresql.service
+
+[Service]
+ExecReload=/bin/kill $MAINPID
+KillMode=process
+Restart=always
+User=pleroma
+Environment="MIX_ENV=prod"
+WorkingDirectory=/opt/pleroma
+ExecStart=/usr/bin/mix phx.server
++ RuntimeMaxSec=86400
+
+[Install]
+WantedBy=multi-user.target
+{% endcodeblock %}
