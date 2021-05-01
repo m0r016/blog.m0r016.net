@@ -1,7 +1,7 @@
 ---
 title: MastodonにAtomの情報を投稿する。
 date: 2021-04-29 00:47:20
-updated: 2021-04-30 03:56:00
+updated: 2021-04-30 14:44:00
 categories: [Fediverse, Mastodon]
 tags:
 - Mastodon
@@ -28,12 +28,12 @@ RAILS_ENV=production bundle exec bin/tootctl accounts create USERNAME --email=EM
 ### 2.インストールする
 `README.md`に従い
 {% codeblock terminal lang:bash line_number:false %}
-pip install feediverse
+sudo pip install feediverse
 {% endcodeblock %}
 
 ### 3.設定する
 {% codeblock terminal line_number:false %}
-$ feediverse
+$ sudo feediverse
 What is your Mastodon Instance URL? your_instance
 Do you have your app credentials already? [y/n] n
 Ok, I'll need a few things in order to get your access token
@@ -48,11 +48,11 @@ Your feediverse configuration has been saved to /home/user/.feediverse
 Add a line line this to your crontab to check every 15 minutes:
 */15 * * * * /usr/local/bin/feediverse
 {% endcodeblock %}
-これで投稿されるようになった。試しに`feediverse`とタイプするとどばーっと投稿される。
+これで投稿されるようになった。試しに`sudo feediverse`とタイプするとどばーっと投稿される。
 
-細かく設定したいときは`.feediverse`を編集する。
+細かく設定したいときは`/root/.feediverse`を編集する。
 恐らく`template: '{title} {url}'`を`template: '更新: {title} {url}'`などするとよいだろう。
-{% codeblock .feediverse lang:yaml %}
+{% codeblock /root/.feediverse lang:yaml %}
 access_token: 
 client_id: 
 client_secret: 
@@ -65,10 +65,14 @@ updated: '2021-04-28T15:37:15.281000+00:00'
 url: slum.cloud
 {% endcodeblock %}
 
+設定が終わったら
+{% codeblock terminal line_number:false %}
+sudo feediverse -n -v
+{% endcodeblock %}
+でテストしておくとよいだろう。
 ### 4.crontabに設定する。
-`*/15 * * * * /usr/local/bin/feediverse`と最後に表示されたが、実際は`/home/$user/.local/bin/feediverse`にあった。
-もちろん個人個人の環境で変わってくるので`which feediverse`で場所を確認しよう。
-`crontab -e`とタイプし、`*/15 * * * * /home/$user/.local/bin/feediverse`とタイプすれば15分おきに設定したフィードをチェックし、投稿される。
+`sudo which feediverse`で場所を確認する。`/usr/local/bin/feediverse`とでた。
+`sudo crontab -e`とタイプし、`*/15 * * * * /usr/local/bin/feediverse`とタイプすれば15分おきに設定したフィードをチェックし、投稿される。
 
 ### 参考
 ・[勝手 Mastodon tootctl リファレンス](https://qiita.com/neustrashimy/items/870769d7db4d95cde238)

@@ -1,7 +1,7 @@
 ---
 title: PosgtreSQLを調整し、Pleromaのレスポンスを向上する。
 date: 2021-04-28 21:27:56
-updated: 2021-04-30 03:53:00
+updated: 2021-05-01 23:40:00
 categories: [Fediverse, pleroma, postgresql]
 tags:
 - postgresql
@@ -23,6 +23,7 @@ config :pleroma, Pleroma.Repo,
   database: "pleroma_db",
   hostname: "localhost",
 +  pool_size: 20,
++  timeout: 120000,
 +  queue_target: 200,
 +  queue_interval: 4000
 
@@ -112,3 +113,7 @@ ExecStart=/usr/bin/mix phx.server
 [Install]
 WantedBy=multi-user.target
 {% endcodeblock %}
+
+### 参考
+・[db_connection](https://hexdocs.pm/db_connection/DBConnection.html#start_link/2-options)
+・[Ecto - Troubleshooting](http://blog.tap349.com/elixir/ecto/2018/12/28/ecto-troubleshooting/)
