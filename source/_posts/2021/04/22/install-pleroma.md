@@ -1,10 +1,10 @@
 ---
 title: PleromaをRaspberry piにインストールする
 date: 2021-04-22 11:39:02
-updated: 2021-04-29 01:26:00
-categories: [Fediverse, pleroma]
+updated: 2021-05-06 01:51:00
+categories: [Fediverse, Pleroma]
 tags:
-- pleroma
+- Pleroma
 description: "PleromaをRaspberry piにインストールする"
 ---
 ### はじめに
