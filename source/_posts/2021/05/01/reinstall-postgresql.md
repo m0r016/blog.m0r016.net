@@ -1,8 +1,8 @@
 ---
 title: PostgreSQLを再インストールする
 date: 2021-05-01 23:58:09
-updated: 2021-05-01 23:58:09
-categories: [PostgreSQL]
+updated: 2021-05-08 14:38:00
+categories: [Ubuntu, PostgreSQL]
 tags:
 - PostgreSQL
 description: "PostgreSQLを再インストールする"

@@ -1,8 +1,8 @@
 ---
 title: mastodonが合う人もいるよって話。
 date: 2021-05-06 00:58:17
-updated: 2021-05-06 01:49:00
-categories: [Fediverce, Mastodon]
+updated: 2021-05-0 14:38:00
+categories: [Fediverse, Mastodon]
 tags:
 - Mastodon
 description: "mastodonが合う人もいるよって話。"
