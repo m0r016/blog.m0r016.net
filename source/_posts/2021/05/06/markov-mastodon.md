@@ -1,7 +1,7 @@
 ---
 title: Mastodonに流れてくる投稿からマルコフ連鎖をさせ、投稿する。
 date: 2021-05-06 10:55:10
-updated: 2021-05-23 15:55:10
+updated: 2021-09-11 02:27:10
 categories: [Fediverce, Mastodon]
 tags:
   - Mastodon-markov
@@ -14,8 +14,8 @@ description: "Mastodonに流れてくる投稿からマルコフ連鎖をさせ�
 
 マルコフ連鎖については、ニコニコ大百科にわかりやすく書いてある。→[ニコニコ大百科 - マルコフ連鎖](https://dic.nicovideo.jp/a/%E3%83%9E%E3%83%AB%E3%82%B3%E3%83%95%E9%80%A3%E9%8E%96)
 
-<!-- toc -->
 <!-- more -->
+<!-- toc -->
 
 ### Git から落としてくる
 

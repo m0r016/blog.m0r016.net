@@ -1,49 +1,54 @@
 ---
 title: vercelに乗り換える
 date: 2021-03-18 11:33:26
-updated: 2021-04-16 19:49:00
+updated: 2021-09-11 02:33:00
 categories: [blog, hexo, vercel]
 tags:
-- vercel
+  - vercel
 description: "github pagesからvercelに乗り換える"
-
 ---
 
 ### はじめに
-github pagesですら少し重いなと感じたのでvercelに乗り換える
+
+github pages ですら少し重いなと感じたので vercel に乗り換える
 
 ### 目次
-<!-- toc -->
-<!-- more -->
-### vercelとは
-[vercel](https://vercel.com/)とは、ウェブホスティングサービスであり、
-netlify同様githubに上げたリポジトリをもとに、自動的に生成。
 
-### 1.deployする
-deproyする。
-[vercel](https://vercel.com/)にログインし、Start Deployingを指定。
+<!-- more -->
+<!-- toc -->
+
+### vercel とは
+
+[vercel](https://vercel.com/)とは、ウェブホスティングサービスであり、
+netlify 同様 github に上げたリポジトリをもとに、自動的に生成。
+
+### 1.deploy する
+
+deproy する。
+[vercel](https://vercel.com/)にログインし、Start Deploying を指定。
 {% asset_img start-deploy.png %}
 
-このような画面になるのでdeployしたいリポジトリを指定。
+このような画面になるので deploy したいリポジトリを指定。
 {% asset_img start-deploy1.png %}
 
-personal accountを指定。
+personal account を指定。
 {% asset_img start-deploy2.png %}
 
-deployが完了するのでopen dashboardをクリック
+deploy が完了するので open dashboard をクリック
 {% asset_img start-deploy3.png %}
 
-settingsをクリック→domainをクリック
+settings をクリック →domain をクリック
 {% asset_img setting-domain.png %}
 
-mywebsite.comに公開したいアドレスを入力
+mywebsite.com に公開したいアドレスを入力
 {% asset_img setting-domain1.png %}
 
-DNSに追加してよと言われるので、言われたとおりにする
+DNS に追加してよと言われるので、言われたとおりにする
 {% asset_img setting-domain2.png %}
 
-### 2.pingを打ってみる。
-github pagesからvercelで配信されているのか調べるために、pingを打ってみた。
+### 2.ping を打ってみる。
+
+github pages から vercel で配信されているのか調べるために、ping を打ってみた。
 {% codeblock terminal lang:bash line_number:false %}
 ping blog.m0r016.net
 PING cname.vercel-dns.com (76.76.21.21) 56(84) bytes of data.
@@ -51,4 +56,5 @@ PING cname.vercel-dns.com (76.76.21.21) 56(84) bytes of data.
 きちんと配信されていることがわかる。
 
 ### おわりに
-vercelになって、爆速に感じた。このサービスはサイト運営するくらいでは無料分で十分なのだ。素晴らしい。
+
+vercel になって、爆速に感じた。このサービスはサイト運営するくらいでは無料分で十分なのだ。素晴らしい。

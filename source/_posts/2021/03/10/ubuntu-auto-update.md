@@ -1,21 +1,24 @@
 ---
 title: Ubuntuを自動アップデートする
 date: 2021-03-10 00:40:47
-updated: 2021-04-16 19:34:00
+updated: 2021-09-11 02:34:00
 categories: [Ubuntu]
 tags:
-- ubuntu
+  - ubuntu
 description: "ubuntuを自動アップデートする"
 ---
 
 ### はじめに
-Ubuntu使う際に毎回`sudo apt update && sudo apt upgrade`を打つのがめんどくさいため、自動でアップデートしてくれるようにする。
+
+Ubuntu 使う際に毎回`sudo apt update && sudo apt upgrade`を打つのがめんどくさいため、自動でアップデートしてくれるようにする。
 
 ### 目次
-<!-- toc -->
-<!-- more -->
 
-### 1./etc/apt/apt.conf.d/20auto-upgradesを編集する
+<!-- more -->
+<!-- toc -->
+
+### 1./etc/apt/apt.conf.d/20auto-upgrades を編集する
+
 /etc/apt/apt.conf.d/にはパッケージ管理システム`apt`の設定が含まれている。
 `20auto-upgrades`を確認しなければならないので一応確認する。
 {% codeblock /etc/apt/apt.conf.d/20auto-upgrades lang:bash %}
@@ -23,7 +26,8 @@ APT::Periodic::Update-Package-Lists "1"; #自動でパッケージリストを�
 APT::Periodic::Unattended-Upgrade "1"; #自動でアップデートするか
 {% endcodeblock %}
 
-### 2./etc/apt/apt.conf.d/50unattended-upgradesを編集する
+### 2./etc/apt/apt.conf.d/50unattended-upgrades を編集する
+
 自動アップデートの設定だ。自分に合わせ、適所変更してほしい。
 {% codeblock /etc/apt/apt.conf.d/50unattended-upgrades lang:diff %}
 // Automatically upgrade packages from these (origin:archive) pairs
@@ -32,41 +36,47 @@ APT::Periodic::Unattended-Upgrade "1"; #自動でアップデートするか
 // from non-security sources (e.g. chromium). By allowing the release
 // pocket these get automatically pulled in.
 Unattended-Upgrade::Allowed-Origins {
-        "${distro_id}:${distro_codename}";
-        "${distro_id}:${distro_codename}-security";
-        // Extended Security Maintenance; doesn't necessarily exist for
-        // every release and this system may not have it installed, but if
-        // available, the policy for updates is such that unattended-upgrades
-        // should also install from here by default.
-        "${distro_id}ESMApps:${distro_codename}-apps-security";
-        "${distro_id}ESM:${distro_codename}-infra-security";
-- //    "${distro_id}:${distro_codename}-updates";
-+       "${distro_id}:${distro_codename}-updates";
-//      "${distro_id}:${distro_codename}-proposed";
-//      "${distro_id}:${distro_codename}-backports";
-};
-// updatesまでは許可することにした。//を消すことにより、有効化することができる。
+"${distro_id}:${distro_codename}";
+"${distro_id}:${distro_codename}-security";
+// Extended Security Maintenance; doesn't necessarily exist for
+// every release and this system may not have it installed, but if
+// available, the policy for updates is such that unattended-upgrades
+// should also install from here by default.
+"${distro_id}ESMApps:${distro_codename}-apps-security";
+"${distro_id}ESM:${distro_codename}-infra-security";
+
+- // "${distro_id}:${distro_codename}-updates";
+
+*       "${distro_id}:${distro_codename}-updates";
+  // "${distro_id}:${distro_codename}-proposed";
+  // "${distro_id}:${distro_codename}-backports";
+  };
+  // updates までは許可することにした。//を消すことにより、有効化することができる。
 
 // Python regular expressions, matching packages to exclude from upgrading
 Unattended-Upgrade::Package-Blacklist {
-    // The following matches all packages starting with linux-
-//  "linux-";
+// The following matches all packages starting with linux-
+// "linux-";
 
     // Use $ to explicitely define the end of a package name. Without
     // the $, "libc6" would match all of them.
-//  "libc6$";
+
+// "libc6$";
 //  "libc6-dev$";
-//  "libc6-i686$";
+// "libc6-i686$";
 
     // Special characters need escaping
-//  "libstdc\+\+6$";
+
+// "libstdc\+\+6$";
 
     // The following matches packages like xen-system-amd64, xen-utils-4.1,
     // xenstore-utils and libxenstore3.0
-//  "(lib)?xen(store)?";
+
+// "(lib)?xen(store)?";
 
     // For more information about Python regular expressions, see
     // https://docs.python.org/3/howto/regex.html
+
 };
 
 // This option controls whether the development release of Ubuntu will be
@@ -97,7 +107,7 @@ Unattended-Upgrade::DevRelease "auto";
 //Unattended-Upgrade::Mail "";
 
 // Set this value to one of:
-//    "always", "only-on-error" or "on-change"
+// "always", "only-on-error" or "on-change"
 // If this is not set, then any legacy MailOnlyOnError (boolean) value
 // is used to chose between "only-on-error" and "on-change"
 //Unattended-Upgrade::MailReport "on-change";
@@ -113,18 +123,22 @@ Unattended-Upgrade::DevRelease "auto";
 // (equivalent to apt-get autoremove)
 //Unattended-Upgrade::Remove-Unused-Dependencies "false";
 
-// Automatically reboot *WITHOUT CONFIRMATION* if
-//  the file /var/run/reboot-required is found after the upgrade
+// Automatically reboot _WITHOUT CONFIRMATION_ if
+// the file /var/run/reboot-required is found after the upgrade
+
 - Unattended-Upgrade::Automatic-Reboot "false";
-+ Unattended-Upgrade::Automatic-Reboot "true";
-// 自動で適用してほしいのでtrue
+
+* Unattended-Upgrade::Automatic-Reboot "true";
+  // 自動で適用してほしいので true
 
 // If automatic reboot is enabled and needed, reboot at the specific
 // time instead of immediately
-//  Default: "now"
+// Default: "now"
+
 - Unattended-Upgrade::Automatic-Reboot-Time "02:00";
-+ Unattended-Upgrade::Automatic-Reboot-Time "05:00";
-// 再起動する時間を決める。24時間表記だ
+
+* Unattended-Upgrade::Automatic-Reboot-Time "05:00";
+  // 再起動する時間を決める。24 時間表記だ
 
 // Use apt bandwidth limit feature, this example limits the download
 // speed to 70kb/sec
@@ -156,4 +170,5 @@ Unattended-Upgrade::DevRelease "auto";
 {% endcodeblock %}
 
 ### 3.保存して終了
+
 動作確認をし終了。

@@ -1,7 +1,7 @@
 ---
 title: ラズパイを用いて重量を図ってみる。
 date: 2021-03-05 15:04:38
-updated: 2021-04-16 15:57:00
+updated: 2021-09-11 02:35:00
 categories: [RaspberryPi, loadcell, hx711]
 tags: 
 - raspi-loadcell
@@ -11,8 +11,8 @@ cover: "/2021/03/05/use-loadcell-by-raspi/raspi-title.png"
 ### はじめに
 ロードセルという重量を図るものをRaspberry Piに接続し、それを見ることはできないか、と言われ調べてやってみたことをここに記す。
 Googleで検索してみてもこの話題は出てこないため、少しでも参考になればいいなと思う。
-<!-- toc -->
 <!-- more -->
+<!-- toc -->
 ### 環境
 ・SSH接続が可能な[Raspberry Pi 3b+](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/) (Python 2.7.16 Raspbian)
 ・ロードセル([VLS-50K](https://www.valcom.co.jp/product/lc/vls/))

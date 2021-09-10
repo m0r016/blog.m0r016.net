@@ -1,22 +1,27 @@
 ---
 title: musicbotを構築し、discordサーバーに追加する。
 date: 2021-03-22 02:04:10
-updated: 2021-04-16 20:13:00
+updated: 2021-09-11 02:32:00
 categories: [discord, musicbot]
 tags:
-- discord-musicbot
+  - discord-musicbot
 description: "musicbotを作成しDiscordサーバーに追加する"
 ---
+
 ### はじめに
-DiscordにはMusicbotというVC内で音楽を聴けるbotが複数ある。
+
+Discord には Musicbot という VC 内で音楽を聴ける bot が複数ある。
 [Rythm](https://rythm.fm/)を使ってもいいのだが、自分で構築したいと思ったのでまとめる。
 
 ### 目次
-<!-- toc -->
+
 <!-- more -->
-### 1.python実行環境を準備する
-pythonはバージョンで文法が変わったりして、メジャーアップデートで正常に動作しなくなることがある。
-このmusicbotでは3.7.xが推奨されているので3.7.xを構築するのに[pyenv](https://github.com/pyenv/pyenv)を使った。
+<!-- toc -->
+
+### 1.python 実行環境を準備する
+
+python はバージョンで文法が変わったりして、メジャーアップデートで正常に動作しなくなることがある。
+この musicbot では 3.7.x が推奨されているので 3.7.x を構築するのに[pyenv](https://github.com/pyenv/pyenv)を使った。
 [公式](https://github.com/pyenv/pyenv#installation)に従い進めていく。
 {% codeblock terminal lang:bash line_number:false %}
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
@@ -28,18 +33,19 @@ exec "$SHELL"
 source ~/.bash_profile
 {% endcodeblock %}
 
-これでpyenvを準備できたので3.7.xをインストールする。
-ひとまず3.7.0で構築したが好きなので構築してほしい
+これで pyenv を準備できたので 3.7.x をインストールする。
+ひとまず 3.7.0 で構築したが好きなので構築してほしい
 {% codeblock terminal lang:bash line_number:false %}
 pyenv install 3.7.0
 cd ~/MusicBot
 pyenv local 3.7.0
 {% endcodeblock %}
-これでMusicBot内では3.7.0を使うように仕向けることができた。
+これで MusicBot 内では 3.7.0 を使うように仕向けることができた。
 
-### 2.musicbotを引っ張ってくる
+### 2.musicbot を引っ張ってくる
+
 [musicbot](https://github.com/Just-Some-Bots/MusicBot)はここを使った。
-数あるmusicbotの中では若干ラグはあるがここが一番音質がいい。
+数ある musicbot の中では若干ラグはあるがここが一番音質がいい。
 {% codeblock terminal lang:bash line_number:false %}
 cd ~/
 git clone https://github.com/Just-Some-Bots/MusicBot
@@ -48,66 +54,71 @@ git checkout release-260819
 {% endcodeblock %}
 
 ### 3.実行環境の準備
+
 [ドキュメント](https://just-some-bots.github.io/MusicBot/installing/ubuntu/)に従い進めていく。
 {% codeblock terminal lang:bash line_number:false %}
 sudo apt-get install build-essential unzip -y
 sudo apt-get install software-properties-common -y
 sudo apt-get update -y
-sudo apt-get install git ffmpeg libopus-dev libffi-dev libsodium-dev python3-pip 
+sudo apt-get install git ffmpeg libopus-dev libffi-dev libsodium-dev python3-pip
 sudo apt-get upgrade -y
 cd ~/MusicBot
 {% endcodeblock %}
 
-python内のパッケージを追加していくが、githubに上がっているものだとエラーが出るので、requiments.txtを次のように書き換える
+python 内のパッケージを追加していくが、github に上がっているものだとエラーが出るので、requiments.txt を次のように書き換える
 {% codeblock requiments.txt lang:diff %}
+
 - pynacl==1.2.1
 - discord.py[voice]==1.2.5
-+ cffi == 1.4.1
-+ pynacl
-+ discord.py[voice]
-pip
-youtube_dl
-colorlog
-+ cffi --only-binary all; sys_platform == 'win32'
-{% endcodeblock %}
+
+* cffi == 1.4.1
+* pynacl
+* discord.py[voice]
+  pip
+  youtube_dl
+  colorlog
+* cffi --only-binary all; sys_platform == 'win32'
+  {% endcodeblock %}
 
 書き換えたらインストールする
 {% codeblock terminal lang:bash line_number:false %}
 sudo python3 -m pip install -U -r requirements.txt
 {% endcodeblock %}
 
-### 4.discord botの準備
-バックエンドは構築できたので、フロントエンド側のdiscordbotを作る。
-[Discord developer](https://discord.com/developers/applications)にアクセスし、New Applacationsを選択。
+### 4.discord bot の準備
+
+バックエンドは構築できたので、フロントエンド側の discordbot を作る。
+[Discord developer](https://discord.com/developers/applications)にアクセスし、New Applacations を選択。
 {% asset_img bot-create.png %}
 
 名前を決めろと言われるので名前を決める。
 {% asset_img bot-create1.png %}
 
-ハンバーガーメニューからBotを選択
+ハンバーガーメニューから Bot を選択
 {% asset_img bot-create2.png %}
 
-botを作成するかといわれるのでyesを指定
+bot を作成するかといわれるので yes を指定
 {% asset_img bot-create3.png %}
 
-Token項目にTokenが生成されるので、そのコードをメモしておく。
+Token 項目に Token が生成されるので、そのコードをメモしておく。
 {% asset_img bot-create4.png %}
 
-ハンバーガーメニューからOAuth2を選択
+ハンバーガーメニューから OAuth2 を選択
 {% asset_img bot-create5.png %}
 
-scopes内のbotをクリックし
+scopes 内の bot をクリックし
 {% asset_img bot-create6.png %}
 
-bot permissions内で許可したいものを選択。恐らく`Send Messeages`, `Manege Messeages`, `Connect`, `Speak`を許可しておけばいいんじゃないかな
+bot permissions 内で許可したいものを選択。恐らく`Send Messeages`, `Manege Messeages`, `Connect`, `Speak`を許可しておけばいいんじゃないかな
 {% asset_img bot-create7.png %}
 
-scopes内にある、`http:`からはじまるものを開く。
+scopes 内にある、`http:`からはじまるものを開く。
 そうすると追加画面が出てくるので、欲しいサーバーに追加して準備は完了だ。
 {% asset_img bot-create8.png %}
 
-### 5.configファイルを編集する
-configファイルを編集し、botを動くようにする。
+### 5.config ファイルを編集する
+
+config ファイルを編集し、bot を動くようにする。
 私はこのように編集した。
 {% codeblock config/options.ini lang:diff %}
 // This is the configuration file for MusicBot. You need to edit this file
@@ -116,9 +127,9 @@ configファイルを編集し、botを動くようにする。
 
 // For help, see: https://just-some-bots.github.io/MusicBot/
 
-// これはMusicBotの設定ファイルです。
+// これは MusicBot の設定ファイルです。
 // ボットを設定するには、このファイルを編集する必要があります。
-// Notepad++やVisual Studio Codeなどのコードエディタを使用してください。
+// Notepad++や Visual Studio Code などのコードエディタを使用してください。
 // ヘルプは以下を参照してください： https://just-some-bots.github.io/MusicBot/
 
 // To get IDs, enable Developer Mode (Options -> Settings -> Appearance)
@@ -126,16 +137,16 @@ configファイルを編集し、botを動くようにする。
 // channel of, then click 'Copy ID'. You can also use the 'listids' command.
 // (http://i.imgur.com/GhKpBMQ.gif)
 
-// IDを取得するには、Discordで開発者モード（オプション→設定→外観）を有効にしてから、取得したい人・チャンネルを右クリックして、「IDをコピー」をクリックします。
+// ID を取得するには、Discord で開発者モード（オプション → 設定 → 外観）を有効にしてから、取得したい人・チャンネルを右クリックして、「ID をコピー」をクリックします。
 // また、「listids」コマンドを使うこともできます。(http://i.imgur.com/GhKpBMQ.gif)
 
 ; HOW TO GET VARIOUS IDS:
 ; http://i.imgur.com/GhKpBMQ.gif
 ; Enable developer mode (options, settings, appearance), right click the object you want the id of, and click Copy ID
-; This works for basically everything you would want the id of (channels and users).  For roles you have to right click a role mention.
+; This works for basically everything you would want the id of (channels and users). For roles you have to right click a role mention.
 
-// 様々なIDを取得する方法 http://i.imgur.com/GhKpBMQ.gif 
-// 開発者モードを有効にし（オプション、設定、外観）、IDを取得したいオブジェクトを右クリックして、「IDをコピー」をクリックします。
+// 様々な ID を取得する方法 http://i.imgur.com/GhKpBMQ.gif
+// 開発者モードを有効にし（オプション、設定、外観）、ID を取得したいオブジェクトを右クリックして、「ID をコピー」をクリックします。
 // ロールの場合は、ロールを右クリックしてください。
 
 [Credentials]
@@ -144,8 +155,8 @@ configファイルを編集し、botを動くようにする。
 // Create a new application, with no redirect URI or boxes ticked.
 // Then click 'Create Bot User' on the application page and copy the token here.
 
-// これは、あなたのDiscordボットアカウントのトークンです。あなたのボットのトークンはこちらで確認してください： https://discordapp.com/developers/applications/me/ 
-// リダイレクトURIやボックスにチェックを入れずに、新しいアプリケーションを作成します。次に、アプリケーションページで「Create Bot User」をクリックし、トークンをここにコピーします。
+// これは、あなたの Discord ボットアカウントのトークンです。あなたのボットのトークンはこちらで確認してください： https://discordapp.com/developers/applications/me/
+// リダイレクト URI やボックスにチェックを入れずに、新しいアプリケーションを作成します。次に、アプリケーションページで「Create Bot User」をクリックし、トークンをここにコピーします。
 
 Token = bot_token_id
 
@@ -153,8 +164,8 @@ Token = bot_token_id
 // playing them. To enable this feature, please fill in these two options with valid
 // details, following these instructions: https://just-some-bots.github.io/MusicBot/using/spotify/
 
-// このボットは、SpotifyのリンクやURIをYouTubeの動画に変換して再生する機能をサポートしています。
-// この機能を有効にするには、以下の指示に従って、有効な詳細情報を以下の2つのオプションに入力してください： https://just-some-bots.github.io/MusicBot/using/spotify/ 
+// このボットは、Spotify のリンクや URI を YouTube の動画に変換して再生する機能をサポートしています。
+// この機能を有効にするには、以下の指示に従って、有効な詳細情報を以下の 2 つのオプションに入力してください： https://just-some-bots.github.io/MusicBot/using/spotify/
 
 Spotify_ClientID =
 Spotify_ClientSecret =
@@ -168,9 +179,9 @@ Spotify_ClientSecret =
 // to another user's ID.
 
 // このオプションは、どのユーザーがボットの完全なパーミッションとコントロールを持つかを決定します。
-// オーナーは1人しか設定できませんが、permissions.iniを使って他のユーザーにも多くのコマンドへのアクセス権を与えることができます。
+// オーナーは 1 人しか設定できませんが、permissions.ini を使って他のユーザーにも多くのコマンドへのアクセス権を与えることができます。
 // このオプションを'auto'に設定すると、ボットの所有者は、ボットアプリケーションを作成した人に設定されますが、これは通常必要なことです。
-// それ以外の場合は、他のユーザーのIDに変更してください。
+// それ以外の場合は、他のユーザーの ID に変更してください。
 
 OwnerID = auto
 
@@ -180,7 +191,7 @@ OwnerID = auto
 // are familiar with Python code.
 
 // このオプションは、どのユーザーが開発者専用のコマンドにアクセスできるかを決定します。
-// 開発者専用コマンドは非常に危険で、間違った使い方をするとボットを壊してしまう可能性があるため、Pythonコードに精通していない限り、このオプションは無視することを強くお勧めします。
+// 開発者専用コマンドは非常に危険で、間違った使い方をするとボットを壊してしまう可能性があるため、Python コードに精通していない限り、このオプションは無視することを強くお勧めします。
 
 DevIDs =
 
@@ -196,7 +207,7 @@ BotExceptionIDs =
 // Determines the prefix that must be used before commands in the Discord chat.
 // e.g if you set this to *, the play command would be triggered using *play.
 
-// Discordチャットのコマンドの前に使用するプレフィックスを決定します。例えば、これを*に設定すると、playコマンドは*playで起動します。
+// Discord チャットのコマンドの前に使用するプレフィックスを決定します。例えば、これを*に設定すると、play コマンドは*play で起動します。
 
 CommandPrefix = !
 
@@ -205,9 +216,11 @@ CommandPrefix = !
 // a space.
 
 // ボットが特定のテキストチャンネルのみを聞くように制限します。
-// この機能を使うには、ボットに聞かせたいテキストチャンネルのIDを、スペースで区切って追加します。
-- BindToChannels = 
-+ BindToChannels = bot-control-channel-id
+// この機能を使うには、ボットに聞かせたいテキストチャンネルの ID を、スペースで区切って追加します。
+
+- BindToChannels =
+
+* BindToChannels = bot-control-channel-id
 
 // Changes the behavior of BindToChannels. Normally any messages sent to a channel not in
 // BindToChannels will be ignored. This option allows servers that do not have any bound
@@ -215,9 +228,9 @@ CommandPrefix = !
 // the Music Bot. Setting this to yes when there are no bound channels does nothing.
 
 // BindToChannels の動作を変更します。
-// 通常、BindToChannelsに含まれていないチャンネルに送信されたメッセージは無視されます。
+// 通常、BindToChannels に含まれていないチャンネルに送信されたメッセージは無視されます。
 // このオプションは、チャンネルが設定されていないサーバーと、チャンネルが設定されているサーバーの間で、どのチャンネルのコマンドでもミュージック・ボットで使えるようにします。
-// バインドされたチャンネルがないときにこのオプションをyesに設定しても、何の効果もありません。
+// バインドされたチャンネルがないときにこのオプションを yes に設定しても、何の効果もありません。
 
 AllowUnboundServers = no
 
@@ -227,9 +240,9 @@ AllowUnboundServers = no
 // enabled, this option will take priority.
 
 // 起動時にボットが自動的にサーバーに参加するようにします。
-// ボットの起動時に参加させたい音声チャンネルのIDをスペースで区切って追加してください。
-// 各サーバーには1つのチャンネルを設定できます。
-// このオプションとAutoSummonが有効になっている場合、このオプションが優先されます。
+// ボットの起動時に参加させたい音声チャンネルの ID をスペースで区切って追加してください。
+// 各サーバーには 1 つのチャンネルを設定できます。
+// このオプションと AutoSummon が有効になっている場合、このオプションが優先されます。
 
 AutojoinChannels = bot-join-voice-channel-id
 
@@ -239,7 +252,7 @@ AutojoinChannels = bot-join-voice-channel-id
 
 // 今プレイ中のメッセージは、ギルドに送るのではなく、ダイレクトメッセージを送ってください。
 // 再生されているメディアを追加したユーザーに送られます。
-// 自動エントリーの再生中メッセージは影響を受けず、NowPlayingChannels設定に従います。
+// 自動エントリーの再生中メッセージは影響を受けず、NowPlayingChannels 設定に従います。
 // ボットはダイレクトメッセージを削除しません。
 
 DMNowPlaying = no
@@ -253,19 +266,19 @@ DisableNowPlayingAutomatic = no
 // For now playing messages that are unaffected by DMNowPlaying and DisableNowPlayingAutomatic,
 // determine which channels the bot is going to output now playing messages to. If this is not
 // specified for a server, now playing message for manually added entries will be sent in the same
-// channel that users used the command to add that entry, and now playing messages for automatically 
+// channel that users used the command to add that entry, and now playing messages for automatically
 // added entries will be sent to the same channel that the last now playing message was sent to if
 // this is not specified for a server if possible. Specifying more than one channel for a server
 // forces the bot to pick only one channel from the list to send messages to.
 
-// DMNowPlayingやDisableNowPlayingAutomaticの影響を受けない再生中のメッセージについては、ボットが再生中のメッセージをどのチャンネルに出力するかを決定します。
+// DMNowPlaying や DisableNowPlayingAutomatic の影響を受けない再生中のメッセージについては、ボットが再生中のメッセージをどのチャンネルに出力するかを決定します。
 // サーバにこれが指定されていない場合、手動で追加されたエントリの再生メッセージは、ユーザがそのエントリを追加するためにコマンドを使用したのと同じチャネルに送信され、自動で追加されたエントリの再生メッセージは、最後の再生メッセージが送信されたのと同じチャネルに送信されます。
-// サーバーに複数のチャンネルを指定すると、ボットはリストの中から1つのチャンネルだけを選んでメッセージを送信します。
+// サーバーに複数のチャンネルを指定すると、ボットはリストの中から 1 つのチャンネルだけを選んでメッセージを送信します。
 
 NowPlayingChannels =
 
 // The bot would try to delete (or edit) previously sent now playing messages by default. If you
-// don't want the bot to delete them (for keeping a log of what has been played), turn this 
+// don't want the bot to delete them (for keeping a log of what has been played), turn this
 // option off.
 
 // ボットは、以前に送信した再生中のメッセージをデフォルトで削除（または編集）しようとします。
@@ -276,7 +289,7 @@ DeleteNowPlaying = yes
 [MusicBot]
 // The volume of the bot, between 0.01 and 1.0.
 
-// 0.01～1.0の範囲で設定します。
+// 0.01 ～ 1.0 の範囲で設定します。
 
 DefaultVolume = 0.25
 
@@ -292,7 +305,7 @@ WhiteListCheck = no
 
 // The number of people voting to skip in order for a song to be skipped successfully,
 // whichever value is lower will be used. Ratio refers to the percentage of undefeaned, non-
-// owner users in the channel. 
+// owner users in the channel.
 
 // 曲が正常にスキップされるためにスキップに投票する人数で、値が小さい方が採用されます。
 // 比率とは、チャンネルの中で、所有者ではない未定義のユーザーの割合を指します。
@@ -304,7 +317,7 @@ SkipRatio = 0.5
 // they will not be redownloaded if found in the folder and queued again. Else, videos will
 // be downloaded to the folder temporarily to play, then deleted after to avoid filling space.
 
-// ダウンロードしたビデオをaudio_cacheフォルダに保存するかどうかを指定します。
+// ダウンロードしたビデオを audio_cache フォルダに保存するかどうかを指定します。
 // この設定が「はい」の場合、フォルダ内にビデオが見つかり、再度キューに入れられても、再ダウンロードされません。
 // そうでない場合は、ビデオは一時的にフォルダにダウンロードされて再生されますが、スペースがいっぱいにならないように、その後削除されます。
 
@@ -327,9 +340,9 @@ AutoSummon = yes
 // Start playing songs from the autoplaylist.txt file after joining a channel. This does not
 // stop users from queueing songs, you can do that by restricting command access in permissions.ini.
 
-// チャンネルに参加した後、autoplaylist.txtファイルから曲の再生を開始する。
+// チャンネルに参加した後、autoplaylist.txt ファイルから曲の再生を開始する。
 // これは、ユーザーが曲をキューに入れることを妨げるものではありません。
-// これは、permissions.iniでコマンドアクセスを制限することで可能です。
+// これは、permissions.ini でコマンドアクセスを制限することで可能です。
 
 UseAutoPlaylist = yes
 
@@ -356,7 +369,7 @@ DeleteMessages = yes
 // If this and DeleteMessages is enabled, the bot will also try to delete messages from other
 // users that called commands. The bot requires the 'Manage Messages' permission for this.
 
-// この機能とDeleteMessagesを有効にすると、ボットはコマンドを呼び出した他のユーザからのメッセージも削除しようとします。
+// この機能と DeleteMessages を有効にすると、ボットはコマンドを呼び出した他のユーザからのメッセージも削除しようとします。
 // これには、「メッセージの管理」権限が必要です。
 
 DeleteInvoking = no
@@ -373,12 +386,13 @@ PersistentQueue = yes
 // DEBUG, VOICEDEBUG, FFMPEG, NOISY, and EVERYTHING. You should only change this if you
 // are debugging, or you want the bot to have a quieter console output.
 
-// コンソールにどのようなメッセージを記録するかを決定します。デフォルトのレベルはINFOで、平均的なユーザーが必要とするものです。
-// その他のレベルには、CRITICAL、ERROR、WARNING、DEBUG、VOICEDEBUG、FFMPEG、NOISY、EVERYTHINGがあります。
+// コンソールにどのようなメッセージを記録するかを決定します。デフォルトのレベルは INFO で、平均的なユーザーが必要とするものです。
+// その他のレベルには、CRITICAL、ERROR、WARNING、DEBUG、VOICEDEBUG、FFMPEG、NOISY、EVERYTHING があります。
 // このレベルを変更するのは、デバッグをしている場合や、ボットのコンソール出力をより静かにしたい場合のみです。
 
 - DebugLevel = INFO
-+ DebugLevel = EVERYTHING
+
+* DebugLevel = EVERYTHING
 
 // Specify a custom message to use as the bot's status. If left empty, the bot
 // will display dynamic info about music currently being played in its status instead.
@@ -386,13 +400,13 @@ PersistentQueue = yes
 // ボットのステータスとして使用するカスタムメッセージを指定します。
 // 空にすると、現在再生されている音楽の動的な情報がステータスに表示されます。
 
-StatusMessage = 
+StatusMessage =
 
 // Write what the bot is currently playing to the data/<server id>/current.txt FILE.
 // This can then be used with OBS and anything else that takes a dynamic input.
 
 // ボットが現在再生している曲を data/<server id>/current.txt FILE に書き込みます。
-// これは、OBSやその他の動的な入力を取るもので使用できます。
+// これは、OBS やその他の動的な入力を取るもので使用できます。
 
 WriteCurrentSong = no
 
@@ -407,7 +421,7 @@ AllowAuthorSkip = yes
 // volume at the cost of higher processing consumption when the song is initially being played.
 
 // 実験的なイコライズコードを有効にします。
-// これにより、すべての曲の音量が似たようなものになりますが、曲を最初に再生するときの処理消費が大きくなります。 
+// これにより、すべての曲の音量が似たようなものになりますが、曲を最初に再生するときの処理消費が大きくなります。
 
 UseExperimentalEqualization = no
 
@@ -416,13 +430,13 @@ UseExperimentalEqualization = no
 // Discord settings.
 
 // ボット全体でエンベッドの使用を可能にします。
-// これは、よりきれいに見えるようにフォーマットされたメッセージですが、Discordの設定でリンクのプレビューを無効にしているユーザーには表示されません。
+// これは、よりきれいに見えるようにフォーマットされたメッセージですが、Discord の設定でリンクのプレビューを無効にしているユーザーには表示されません。
 
 UseEmbeds = yes
 
 // The amount of items to show when using the queue command.
 
-// queueコマンドを使用する際に表示するアイテムの量を指定します。
+// queue コマンドを使用する際に表示するアイテムの量を指定します。
 
 QueueLength = 10
 
@@ -458,7 +472,7 @@ LeaveServersWithoutOwner = no
 
 // Use command alias defined in aliases.json.
 
-// aliases.jsonで定義されたコマンドエイリアスを使用します。
+// aliases.json で定義されたコマンドエイリアスを使用します。
 
 UseAlias = yes
 
@@ -467,23 +481,26 @@ UseAlias = yes
 
 // 国際化ファイルへのパス。これが何をするものかわからない場合は、設定しないでください。
 
-i18nFile = 
+i18nFile =
 {% endcodeblock %}
+
 ### 5.起動する
+
 `./run.sh`で起動を始めるのだが、起動時に
 {% codeblock terminal lang:bash line_number:false %}
 ModuleNotFoundError: No module named 'hoge'
 {% endcodeblock %}
-のようなエラーが大抵出るので、このエラーが出なくなるまで繰り返す。hogeが足りてないパッケージなので
+のようなエラーが大抵出るので、このエラーが出なくなるまで繰り返す。hoge が足りてないパッケージなので
 {% codeblock terminal lang:bash line_number:false %}
 pip install hoge
 {% endcodeblock %}
 のように書いてインストールしていく。
-起動が完了し、botがオンラインになったことが確認でき、!play titleで再生されたら成功だ。
+起動が完了し、bot がオンラインになったことが確認でき、!play title で再生されたら成功だ。
 使えるコマンドは[ここ](https://just-some-bots.github.io/MusicBot/using/commands/)にある。
 
 ### 6.デーモン化する
-systemdを用いて、バックグラウンドで動くようにする。
+
+systemd を用いて、バックグラウンドで動くようにする。
 {% codeblock /etc/systemd/system/musicbot.service lang:ini %}
 [Unit]
 Description=MusicBot
@@ -499,9 +516,8 @@ User=musicbot
 WantedBy=multi-user.target
 {% endcodeblock %}
 
-pythonの実体の場所はwhichコマンドで引っ張ってこれる。
+python の実体の場所は which コマンドで引っ張ってこれる。
 {% codeblock terminal lang:bash line_number:false %}
 which python
 /home/musicbot/.pyenv/shims/python
 {% endcodeblock %}
-

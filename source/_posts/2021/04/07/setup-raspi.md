@@ -1,7 +1,7 @@
 ---
 title: Raspberry Piをセットアップする - 前編 -
 date: 2021-04-07 11:00:15
-updated: 2021-04-16 21:02:00
+updated: 2021-09-11 02:30:00
 categories: [RaspberryPi]
 tags: 
 - Raspberry Pi SetUp
@@ -10,8 +10,8 @@ description: "Raspberry Piをセットアップする - 前編 -"
 ### はじめに
 一台余っている[Raspberry Pi](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)があるのでセットアップする。
 
-<!-- toc -->
 <!-- more -->
+<!-- toc -->
 ### Raspberry Pi 3Bと3B+の違い。
 ラズパイには3Bと3B+がある。
 CPUは同じであるが、3B+のほうが0.2GHzUPの1.4GHz。

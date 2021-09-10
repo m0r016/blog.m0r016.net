@@ -1,15 +1,15 @@
 ---
 title: M1 Mac Mini(2020)を買った話
 date: 2021-08-26 23:36:30
-updated: 2021-08-26 23:36:30
+updated: 2021-09-11 02:25:30
 categories: [Apple]
 tags:
   - M1 Mac Mini
 description: "M1 Mac Mini(2020)を買ったのでそのレビュー"
 ---
 
-<!-- toc -->
 <!-- more -->
+<!-- toc -->
 
 ### 購入に至った経緯
 

@@ -1,7 +1,7 @@
 ---
 title: PleromaをRaspberry piにインストールする
 date: 2021-04-22 11:39:02
-updated: 2021-05-06 01:51:00
+updated: 2021-09-11 02:29:00
 categories: [Fediverse, Pleroma]
 tags:
 - Pleroma
@@ -11,8 +11,8 @@ description: "PleromaをRaspberry piにインストールする"
 これはFediverseの仕様だから仕方ないのだが、バックアップをとらず、PleromaやらMastodonを消去し、消去前と同じドメインを使うと、フォローリクエストが送られていなかったりタイムラインに投稿が乗らなかったり様々なエラーが生じる。
 そこで、Raspberry piをインストールしなおし、Pleromaをインストールし使えるようにするまでをまとめた。
 
-<!-- toc -->
 <!-- more -->
+<!-- toc -->
 
 ### Pleromaとは
 >lainにより開発されている分散SNS。OStatusプロトコルとActivityPubプロト>コルにより、マストドンを含む他の分散SNSのインスタンスと連合を形成することができる。また、MastodonのAPIとある程度の互換性があるため、マストドン用のクライアント (スマートフォンアプリなど) を使用できる場合がある。
