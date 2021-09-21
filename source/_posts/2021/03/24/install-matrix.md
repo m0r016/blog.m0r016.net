@@ -97,8 +97,7 @@ args:
 user: synapse_user
 
 - password: secretpassword
-
-* password: <pass>
++ password: <pass>
   database: synapse
   host: localhost
   cp_min: 5
@@ -107,7 +106,6 @@ user: synapse_user
 
 pb_hba.conf も変えておく。私の場合`/etc/postgres/10/main/`内にあった。
 {% codeblock /etc/postgres/10/main/pg_hba.conf lang:diff line_number:false %}
-
 - host synapse synapse_user ::1/128 md5
   {% endcodeblock %}
 
@@ -121,14 +119,12 @@ host all all ::1/128 ident
 {% codeblock homeserver.yaml lang:diff first_line:54 %}
 
 - server_name: "SERVERNAME"
-
-* server_name: matrix.slum.cloud
++ server_name: matrix.slum.cloud
   {% endcodeblock %}
   {% codeblock homeserver.yaml lang:diff first_line:68 %}
 
 - web_client_location: https://riot.example.com/
-
-* web_client_location: https://matrix.slum.cloud
++ web_client_location: https://matrix.slum.cloud
   {% endcodeblock %}
 
 ### 5.nginx の設定
@@ -166,17 +162,18 @@ server {
 - listen 443 http2;
 - listen [::]:443 http2;
 
-* listen 443 ssl http2;
-* listen [::]:443 ssl http2;
++ listen 443 ssl http2;
++ listen [::]:443 ssl http2;
 
-
+{% raw %}
     # For the federation port
+{% endraw %}
 
 - listen 8448 http2 ;
 - listen [::]:8448 http2 ;
 
-* listen 8448 ssl http2 ;
-* listen [::]:8448 ssl http2 ;
++ listen 8448 ssl http2 ;
++ listen [::]:8448 ssl http2 ;
 
 
     server_name matrix.slum.cloud;
@@ -202,15 +199,13 @@ server {
 // TLS セクション内の tls_certificate_path と tls_private_key_path を先ほど取得した証明書のパスを書き込む
 
 - #tls_certificate_path: "CONFDIR/SERVERNAME.tls.crt"
-
-* tls_certificate_path: "/etc/letsencrypt/live/matrix.slum.cloud/fullchain.pem"
++ tls_certificate_path: "/etc/letsencrypt/live/matrix.slum.cloud/fullchain.pem"
 
 // PEM-encoded private key for TLS
 //
 
 - #tls_private_key_path: "CONFDIR/SERVERNAME.tls.key"
-
-* tls_private_key_path: "/etc/letsencrypt/live/matrix.slum.cloud/privkey.pem"
++ tls_private_key_path: "/etc/letsencrypt/live/matrix.slum.cloud/privkey.pem"
   {% endcodeblock %}
 
 ### 6.実行する

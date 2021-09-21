@@ -83,8 +83,8 @@ yarn install
 -            "base_url": "https://matrix-client.matrix.org",
 -            "server_name": "matrix.org"
 
-*            "base_url": "https://matrix.slum.cloud",
-*            "server_name": "matrix.slum.cloud"
++            "base_url": "https://matrix.slum.cloud",
++            "server_name": "matrix.slum.cloud"
         },
         "m.identity_server": {
             "base_url": "https://vector.im"

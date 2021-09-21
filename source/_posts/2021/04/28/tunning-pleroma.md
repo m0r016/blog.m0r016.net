@@ -1,7 +1,7 @@
 ---
 title: PosgtreSQLを調整し、Pleromaのレスポンスを向上する。
 date: 2021-04-28 21:27:56
-updated: 2021-09-11 02:28:00
+updated: 2021-09-21 22:23:17
 categories: [Fediverse, Pleroma, Postgresql]
 tags:
   - Postgresql
@@ -55,23 +55,23 @@ sudo cp /etc/postgresql/$VER/main/postgresql.back /etc/postgresql/$VER/main/post
 
 - max_connections = 20
 
-* max_connections = 100
++ max_connections = 100
 
 - shared_buffers = 256MB
 
-* shared_buffers = 128MB
++ shared_buffers = 128MB
 
 - effective_cache_size = 768MB
 
-* // effective_cache_size = 4GB
++ // effective_cache_size = 4GB
 
 - maintenance_work_mem = 64MB
 
-* // maitenance_work_mem = 64MB
++ // maitenance_work_mem = 64MB
 
 - work_mem = 13107kB
 
-* // work_mem = 4MB
++ // work_mem = 4MB
   {% endcodeblock %}
   変更した。いったん様子を見る。
   `sudo service pleroma restart`
@@ -84,51 +84,51 @@ DB Version は 12, OS Type は Linux, DB Type は Web application, Total Memory(
 
 - checkpoint_completion_target = 0.9
 
-* // checkpoint_completion_target = 0.5
++ // checkpoint_completion_target = 0.5
 
 - wal_buffers = 7834kB
 
-* wal_buffers = -1
++ wal_buffers = -1
 
 - default_statistics_targer = 100
 
-* // default_statistics_targer = 100
++ // default_statistics_targer = 100
 
 - random_page_cost = 1.1
 
-* // random_page_cost = 4.0
++ // random_page_cost = 4.0
 
 - effective_io_concurrency = 200
 
-* // effective_io_concurryency = 1
++ // effective_io_concurryency = 1
 
 - work_mem = 6553kB
 
-* work_mem = 13107kB
++ work_mem = 13107kB
 
 - min_wal_size = 1GB
 
-* min_wal_size = 80MB
++ min_wal_size = 80MB
 
 - max_wal_size = 4GB
 
-* max_wal_size = 1GB
++ max_wal_size = 1GB
 
 - max_worker_processes = 4
 
-* max_worker_processes = 8
++ max_worker_processes = 8
 
 - max_parallel_workers_per_gather = 2
 
-* // max_parallel_workers_par_gather = 2
++ // max_parallel_workers_par_gather = 2
 
 - max_parallel_workers = 4
 
-* max_parallel_workers = 8
++ max_parallel_workers = 8
 
 - max_parallel_workers = 2
 
-* // max_parallel_workers = 2
++ // max_parallel_workers = 2
   {% endcodeblock %}
   書き換えたら`sudo service pleroma restart`をして完了
 

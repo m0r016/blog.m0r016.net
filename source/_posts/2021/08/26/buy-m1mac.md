@@ -1,19 +1,19 @@
 ---
 title: M1 Mac Mini(2020)を買った話
 date: 2021-08-26 23:36:30
-updated: 2021-09-11 02:25:30
+updated: 2021-09-11 02:52:30
 categories: [Apple]
 tags:
   - M1 Mac Mini
 description: "M1 Mac Mini(2020)を買ったのでそのレビュー"
 ---
 
-<!-- more -->
-<!-- toc -->
-
 ### 購入に至った経緯
 
 ありがたいことに 5 月ごろにうちで働かないかとお声がけをいただき、働かせていただいているのだが、稼働中ﾌｧｰﾌｧｰうるさかったり MTG 中に回線が悪いわけでもないのに重いと言われたことがあり、既存の[MacBook Air (13-inch, 2017)](https://support.apple.com/kb/SP753?locale=ja_JP)から新しい Mac に乗り換えようと考えたのがきっかけ
+
+<!-- more -->
+<!-- toc -->
 
 ### Mac を選ぶ
 

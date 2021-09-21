@@ -1,7 +1,7 @@
 ---
 title: Ubuntuを自動アップデートする
 date: 2021-03-10 00:40:47
-updated: 2021-09-11 02:34:00
+updated: 2021-09-21 00:31:00
 categories: [Ubuntu]
 tags:
   - ubuntu
@@ -46,8 +46,7 @@ Unattended-Upgrade::Allowed-Origins {
 "${distro_id}ESM:${distro_codename}-infra-security";
 
 - // "${distro_id}:${distro_codename}-updates";
-
-*       "${distro_id}:${distro_codename}-updates";
++       "${distro_id}:${distro_codename}-updates";
   // "${distro_id}:${distro_codename}-proposed";
   // "${distro_id}:${distro_codename}-backports";
   };
@@ -127,8 +126,7 @@ Unattended-Upgrade::DevRelease "auto";
 // the file /var/run/reboot-required is found after the upgrade
 
 - Unattended-Upgrade::Automatic-Reboot "false";
-
-* Unattended-Upgrade::Automatic-Reboot "true";
++ Unattended-Upgrade::Automatic-Reboot "true";
   // 自動で適用してほしいので true
 
 // If automatic reboot is enabled and needed, reboot at the specific
@@ -136,8 +134,7 @@ Unattended-Upgrade::DevRelease "auto";
 // Default: "now"
 
 - Unattended-Upgrade::Automatic-Reboot-Time "02:00";
-
-* Unattended-Upgrade::Automatic-Reboot-Time "05:00";
++ Unattended-Upgrade::Automatic-Reboot-Time "05:00";
   // 再起動する時間を決める。24 時間表記だ
 
 // Use apt bandwidth limit feature, this example limits the download

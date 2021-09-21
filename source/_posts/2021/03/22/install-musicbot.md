@@ -1,7 +1,7 @@
 ---
 title: musicbotを構築し、discordサーバーに追加する。
 date: 2021-03-22 02:04:10
-updated: 2021-09-11 02:32:00
+updated: 2021-09-21 00:34:00
 categories: [discord, musicbot]
 tags:
   - discord-musicbot
@@ -71,13 +71,13 @@ python 内のパッケージを追加していくが、github に上がってい
 - pynacl==1.2.1
 - discord.py[voice]==1.2.5
 
-* cffi == 1.4.1
-* pynacl
-* discord.py[voice]
++ cffi == 1.4.1
++ pynacl
++ discord.py[voice]
   pip
   youtube_dl
   colorlog
-* cffi --only-binary all; sys_platform == 'win32'
++ cffi --only-binary all; sys_platform == 'win32'
   {% endcodeblock %}
 
 書き換えたらインストールする
@@ -220,7 +220,7 @@ CommandPrefix = !
 
 - BindToChannels =
 
-* BindToChannels = bot-control-channel-id
++ BindToChannels = bot-control-channel-id
 
 // Changes the behavior of BindToChannels. Normally any messages sent to a channel not in
 // BindToChannels will be ignored. This option allows servers that do not have any bound
@@ -392,7 +392,7 @@ PersistentQueue = yes
 
 - DebugLevel = INFO
 
-* DebugLevel = EVERYTHING
++ DebugLevel = EVERYTHING
 
 // Specify a custom message to use as the bot's status. If left empty, the bot
 // will display dynamic info about music currently being played in its status instead.

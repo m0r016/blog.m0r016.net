@@ -1,7 +1,7 @@
 ---
 title: 従来のcodeblockの配色が気に入らないので変更する
 date: 2021-04-16 21:11:17
-updated: 2021-09-11 02:30:00
+updated: 2021-09-21 22:24:00
 categories: [blog, hexo, codeblock]
 tags:
   - hexo-icarus-customize
@@ -26,7 +26,7 @@ highlight:
 
 -        theme: atom-one-light
 
-*        theme: monokai
++        theme: monokai
           // Show copy code button
           clipboard: true
           // Default folding status of the code blocks. Can be "", "folded", "unfolded"

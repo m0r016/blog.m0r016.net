@@ -1,7 +1,7 @@
 ---
 title: netlifyからgithub pagesに乗り換える
 date: 2021-03-15 14:40:34
-updated: 2021-09-11 02:33:00
+updated: 2021-09-21 00:34:00
 categories: [blog, hexo, github-pages]
 tags:
   - github-pages
@@ -39,13 +39,13 @@ npm install hexo-deployer-git --save
 インストールが完了したら、[hexo-deployer-git](https://github.com/hexojs/hexo-deployer-git)をもとに設定を行う。`_config.yml`を開き、追加していく。
 {% codeblock _config.yml lang:diff %}
 
-- deploy:
-- type: git
-- repo: your_repo
-- branch: public
++ deploy:
++ type: git
++ repo: your_repo
++ branch: public
   {% endcodeblock %}
 
-\_config.yml を保存する。
+config.yml を保存する。
 
 ### 3.deploy する
 
