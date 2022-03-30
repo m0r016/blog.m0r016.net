@@ -115,4 +115,4 @@ FIREBASE_MEASUREMENT_ID=<Firebase Measurement ID>
 あとはeslintやらVSCode上で問題が出ないことを確認すれば、Firebaseの認証情報をgithubに公開することなく、使うことができる
 
 githubに今回変更箇所をプッシュしておいたのでもしよければ→[github](https://github.com/m0r016/replog/commit/db92ba2133df3becb82af1e071b0259e07c4892d)
-また、疑問点や間違ってる箇所があった[PR](https://github.com/m0r016/blog.m0r016.net/pulls)や[Twitter](https://twitter.com/m0r016)まで
+また、疑問点や間違ってる箇所があった[issue](https://github.com/m0r016/blog.m0r016.net/issues)や[Twitter](https://twitter.com/m0r016)まで
