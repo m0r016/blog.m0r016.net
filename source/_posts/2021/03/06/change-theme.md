@@ -1,7 +1,7 @@
 ---
 title: hexoのテーマをapolloからicarusに変更する
 date: 2021-03-05 19:34:40
-updated: 2021-09-11 02:35:00
+updated: 2022-03-30 21:02:00
 categories: [blog, hexo, theme]
 tags:
   - hexo-theme-changes
@@ -38,9 +38,10 @@ npm audit fix
 
 `git clone`でもいいのだが、変更を加える場合があるので`git submodule`する
 {% codeblock terminal line_number:false %}
-git submodule add https://github.com/ppoffice/hexo-theme-icarus
+git submodule add https://github.com/ppoffice/hexo-theme-icarus themes/icarus
 {% endcodeblock %}
 
+また`git pull`したときに、`submodule`は自動で引っ張ってこないため、`git submodule update --init`を実行する
 ### 3.\_config.yml を変更し icarus 側の変更も加える
 
 hexo に読み込ませるため theme を変更する
