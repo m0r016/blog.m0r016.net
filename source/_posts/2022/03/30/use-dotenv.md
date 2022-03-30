@@ -106,7 +106,7 @@ FIREBASE_MEASUREMENT_ID=<Firebase Measurement ID>
 
 `.gitignore`に`.env`ファイルを追加する **!ここが一番大事!**
 {% codeblock .gitignore lang:diff line_number:true first_line:59 %}
-# CocoaPods
+\# CocoaPods
 /ios/Pods/
 + .env
 {% endcodeblock %}
