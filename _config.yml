@@ -1,12 +1,12 @@
 title: m'Tech
 subtitle: m'Tech
-description: "テクノロジーについて扱う個人運営サイト"
+description: テクノロジーについて扱う個人運営サイト
 keywords: null
 author: m0r016
 language: ja
-timezone: "Asia/Tokyo"
+timezone: Asia/Tokyo
 url: https://blog.m0r016.net
-permalink: ":year/:month/:day/:title/"
+permalink: ':year/:month/:day/:title/'
 permalink_defaults: null
 pretty_urls:
   trailing_index: true
@@ -17,15 +17,15 @@ tag_dir: tags
 archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
-i18n_dir: ":lang"
+i18n_dir: ':lang'
 skip_render: null
-new_post_name: ":year/:month/:day/:title.md"
+new_post_name: ':year/:month/:day/:title.md'
 default_layout: post
 titlecase: false
 external_link:
   enable: true
   field: site
-  exclude: ""
+  exclude: ''
 filename_case: 0
 render_drafts: false
 post_asset_folder: true
@@ -35,18 +35,18 @@ highlight:
   enable: true
   line_number: true
   auto_detect: false
-  tab_replace: ""
+  tab_replace: ''
   wrap: true
   hljs: false
 prismjs:
   enable: false
   preprocess: true
   line_number: true
-  tab_replace: ""
+  tab_replace: ''
 index_generator:
-  path: ""
+  path: ''
   per_page: 10
-  order_by: "-date"
+  order_by: '-date'
 default_category: uncategorized
 category_map: null
 tag_map: null
@@ -65,12 +65,12 @@ plugins:
   - hexo-generator-feed
   - hexo-generator-seo-friendly-sitemap
 robotstxt:
-  useragent: "*"
+  useragent: '*'
   disallow:
     - /css/
     - /img/
     - /js/
-  allow:
+  allow: null
   sitemap: /sitemap.xml
 feed:
   enable: true
@@ -81,14 +81,14 @@ feed:
     - atom.xml
     - rss.xml
   limit: 20
-  hub:
-  content:
+  hub: null
+  content: null
   content_limit: 140
-  content_limit_delim: " "
-  order_by: -date
+  content_limit_delim: ' '
+  order_by: '-date'
   icon: icon.png
   autodiscovery: true
-  template:
+  template: null
 sitemap:
   path: sitemap.xml
   tag: false
@@ -101,28 +101,3 @@ deploy:
   branch: public
 google_maps_api_key: AIzaSyBLKH8v9F7BDoirzA7-zJNAy7HrdXGEFQc
 all_minifier: true
-#filter_optimize:
-#  enable: true
-# remove the surrounding comments in each of the bundled files
-#  remove_comments: false
-#  css:
-# minify all css files
-#    minify: true
-# bundle loaded css files into one
-#    bundle: true
-# use a script block to load css elements dynamically
-#    delivery: true
-# make specific css content inline into the html page
-#   - only support the full path
-#   - default is ['css/main.css']
-#    inlines:
-#    excludes:
-#  js:
-# minify all js files
-#    minify: true
-# bundle loaded js files into one
-#    bundle: true
-#    excludes:
-# set the priority of this plugin,
-# lower means it will be executed first, default of Hexo is 10
-#  priority: 12
