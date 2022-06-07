@@ -8,3 +8,4 @@ public/
 package-lock.jspn
 _config.yml
 *.code-workspace
+.*
